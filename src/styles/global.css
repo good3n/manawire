@@ -1,0 +1,85 @@
+:root {
+  --color-green: #3bae52;
+  --color-lightgray: #80828b;
+  --color-headertext: #171c2f;
+  --color-bodytext: #5e6471;
+  --color-graybg: #f6f6f6;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--color-bodytext);
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.6;
+  word-wrap: break-word;
+  font-kerning: normal;
+  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+  font-feature-settings: "kern", "liga", "clig", "calt";
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--color-headertext);
+}
+
+h1 {
+  font-size: 42px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 28px;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: var(--color-green);
+}
+
+div {
+  box-sizing: border-box;
+}
+
+#gatsby-plugin-scroll-indicator {
+  z-index: 1000;
+  top: 101px !important;
+  height: 4px !important;
+}
+
+@media (max-width: 1100px) {
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 1000px) {
+  #gatsby-plugin-scroll-indicator {
+    top: 0 !important;
+  }
+}
