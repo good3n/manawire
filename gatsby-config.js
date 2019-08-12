@@ -64,6 +64,7 @@ module.exports = {
         fonts: [
           {
             family: `Nunito Sans`,
+            variants: [`400`, `600`, `700`],
             subsets: [`latin`],
           },
         ],
