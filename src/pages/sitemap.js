@@ -88,7 +88,7 @@ const Sitemap = () => (
         <h3>Posts</h3>
         <ul>
           <li><Link to="/blog/common-local-seo-mistakes/">10 Common Local SEO Mistakes</Link></li>
-          <li><Link to="https://www.manawire.com/blog/quick-seo-tips-for-small-businesses/">Quick SEO Tips for Small Businesses</Link></li>
+          <li><Link to="/blog/quick-seo-tips-for-small-businesses/">Quick SEO Tips for Small Businesses</Link></li>
           <li><Link to="/blog/6-reasons-avoid-diy-website-builders-business/">6 reasons to avoid DIY website builders for business</Link></li>
         </ul>
       </div>
