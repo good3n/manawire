@@ -61,8 +61,9 @@ const StyledQuote = styled.div`
     }
 
     @media (max-width: 600px) {
-      width: 100%;
+      width: auto;
       padding: 50px;
+      margin: 0 -20px;
     }
 
     .grid {

@@ -10,6 +10,10 @@ const StyledFooCta = styled.div`
   background: #fff;
   position: relative;
 
+  @media (max-width: 1000px) {
+    padding: 70px 50px;
+  }
+
   svg {
     width: 40px;
     fill: var(--color-green);
