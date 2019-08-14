@@ -77,7 +77,7 @@ const NavToggle = styled.button`
     display: inline-block;
     position: fixed;
     top: 30px;
-    right: 50px;
+    right: 20px;
   }
 
   .toggle-box {

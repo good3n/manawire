@@ -14,8 +14,8 @@ const StyledIntro = styled.div`
   max-width: 1100px;
 
   @media (max-width: 1000px) {
-    margin: -50px 40px 0;
-    padding: 100px 50px;
+    margin: -50px 20px 0;
+    padding: 70px 30px;
     max-width: 100%;
     grid-template-columns: 1fr;
     grid-gap: 50px;

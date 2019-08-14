@@ -26,7 +26,7 @@ const StyledHero = styled.div`
     z-index: 1;
 
     @media (max-width: 1000px) {
-      padding: 100px 30px;
+      padding: 70px 10px;
     }
   }
 
@@ -38,14 +38,12 @@ const StyledHero = styled.div`
     }
   }
 
-  img {
+  .gatsby-image-wrapper {
     height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: 50% 50%;
 
     @media (max-width: 1000px) {
       height: 400px;
+      margin: 0 -20px;
     }
   }
 

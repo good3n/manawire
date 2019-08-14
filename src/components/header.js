@@ -1,8 +1,25 @@
 import React from "react"
-import { Link } from "gatsby"
+import { StaticQuery, Link, graphql } from "gatsby"
+import Img from "gatsby-image"
 import styled from "styled-components"
-import logo from "../images/manawire-logo.png"
 import MainNav from "../components/nav"
+
+const Logo = () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        logo: file(relativePath: { eq: "manawire-logo.png" }) {
+          childImageSharp {
+            fixed(width: 210) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    `}
+    render={data => <Img fixed={data.logo.childImageSharp.fixed} />}
+  />
+)
 
 const StyledHeader = styled.header`
   position: fixed;
@@ -25,22 +42,22 @@ const GridContainer = styled.div`
   align-items: center;
 
   @media (max-width: 1000px) {
-    padding: 0 50px;
+    padding: 0 30px;
     grid-template-columns: 3fr 1fr;
   }
-`
 
-const Logo = styled.img`
-  width: 210px;
-  max-width: 100%;
-  display: block;
+  img {
+    width: 210px;
+    max-width: 100%;
+    display: block;
+  }
 `
 
 const Header = () => (
   <StyledHeader>
     <GridContainer>
       <Link to="/">
-        <Logo src={logo} alt="" />
+        <Logo alt="Manawire" />
       </Link>
       <MainNav />
     </GridContainer>
