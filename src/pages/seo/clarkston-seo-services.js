@@ -4,7 +4,7 @@
  */
 
 import React from "react"
-
+import { graphql } from "gatsby"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import styled from "styled-components"
@@ -14,8 +14,24 @@ import Intro from "../../components/Intro"
 import ValueProps from "../../components/ValueProps"
 import Quote from "../../components/Quote"
 
-import HeroImg from "../../images/union-restaurant-clarkston-mi.jpg"
-import ValueImg from "../../images/depot-park-clarkston-mi.jpg"
+export const Images = graphql`
+  query {
+    heroImg: file(relativePath: { eq: "union-restaurant-clarkston-mi.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    valueImg: file(relativePath: { eq: "depot-park-clarkston-mi.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
 
 const LocationInfo = styled.div`
   display: grid;
@@ -38,14 +54,14 @@ const LocationInfo = styled.div`
 // todo: iframe
 // const iframe = '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2999242.558156704!2d-83.355583!3d42.768309!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x249f322b07d58417!2sManawire!5e0!3m2!1sen!2sus!4v1565564796379!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>';
 
-const ClarkstonSeoPage = () => (
+const ClarkstonSeoPage = (props) => (
   <Layout>
     <SEO title="Clarkston SEO Services - Search Engine Optimization" />
     <Hero
       title={["SEO Company in ", <span>Clarkston, Michigan</span>]}
       text="Manawire is the highest rated Clarkston SEO Services company."
       linktext="Get in touch"
-      image={HeroImg}
+      image={props.data.heroImg.childImageSharp.fluid}
     />
     <Intro
       subtitle="SEO in Clarkston &amp; Beyond."
@@ -55,7 +71,7 @@ const ClarkstonSeoPage = () => (
       linkText="Request an audit"
     />
     <ValueProps
-      image={ValueImg}
+      image={props.data.valueImg.childImageSharp.fluid}
       title="How Your Clarkston SEO Campaign Is Put Together"
       text="Your campaign workflow consists of four stages:"
       link="/contact/"
