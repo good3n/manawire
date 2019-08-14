@@ -1,5 +1,5 @@
 import React from "react"
-
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -8,17 +8,33 @@ import Intro from "../components/Intro"
 import ValueProps from "../components/ValueProps"
 import Quote from "../components/Quote"
 
-import HeroImg from "../images/seo1.jpg"
-import ValueImg from "../images/seo2.jpg"
+export const Images = graphql`
+  query {
+    heroImg: file(relativePath: { eq: "seo1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    valueImg: file(relativePath: { eq: "seo2.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
 
-const SeoPage = () => (
+const SeoPage = (props) => (
   <Layout>
     <SEO title="SEO - Search Engine Optimization" />
     <Hero
       title={[<span key="[keyhack123seo]">SEO</span>, " services & marketing consulting."]}
       text="Is your website not getting the traffic you feel it should? More than likely, it’s due to poor search engine rankings."
       linktext="Get in touch"
-      image={HeroImg}
+      image={props.data.heroImg.childImageSharp.fluid}
     />
     <Intro
       subtitle="Drive more traffic to your website."
@@ -28,7 +44,7 @@ const SeoPage = () => (
       linkText="Get started"
     />
     <ValueProps
-      image={ValueImg}
+      image={props.data.valueImg.childImageSharp.fluid}
       title="Why is SEO important for your business?"
       text="A website alone is not enough. With online competition stronger than ever, you need to stand out from the rest."
       link="/contact/"

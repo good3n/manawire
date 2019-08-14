@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import Img from "gatsby-image"
 
 const StyledHero = styled.div`
   display: grid;
@@ -68,7 +69,7 @@ const Hero = (props) => (
       <p>{props.text}</p>
       {props.linktext && <Link to="/contact/">{props.linktext}</Link>}
     </span>
-    <img src={props.image} alt="" />
+    <Img fluid={props.image} />
   </StyledHero>
 )
 

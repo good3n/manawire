@@ -1,36 +1,36 @@
 import React from "react"
 import styled from "styled-components"
+import Img from "gatsby-image"
 import BorderLink from "../components/styled/BorderLink"
 
 const StyledValueProps = styled.div`
   display:grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 80px;
-  margin: 0 80px;
+  padding-left: 80px;
 
-  @media (max-width: 1100px) {
+  @media (max-width: 1000px) {
     grid-template-columns: 1fr;
-    margin: 0;
-    padding: 0 50px;
+    padding: 0;
   }
 
-  img {
-    object-fit: cover;
-    object-position: 50% 50%;
-    height: calc(100% + 50px);
+  .gatsby-image-wrapper {
     margin-top: -50px;
-    position: relative;
-    width: 100%;
 
-    @media (max-width: 1100px) {
+    @media (max-width: 1000px) {
       display: none;
     }
   }
 
-  div {
+  div.value-props {
     background: var(--color-graybg);
-    margin: 0 -80px;
+    margin-left: -80px;
     padding: 80px;
+
+    @media (max-width: 1000px) {
+      margin: 0;
+      padding: 50px 30px;
+    }
   }
 
   h2 {
@@ -64,8 +64,8 @@ const StyledValueProps = styled.div`
 
 const ValueProps = (props) => (
   <StyledValueProps>
-    {props.image && <img src={props.image} alt="" />}
-    <div>
+    {props.image && <Img fluid={props.image} />}
+    <div className="value-props">
       <h2>{props.title}</h2>
       <p>{props.text}</p>
       <ul>

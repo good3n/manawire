@@ -1,5 +1,5 @@
 import React from "react"
-
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -8,10 +8,26 @@ import Intro from "../components/Intro"
 import ValueProps from "../components/ValueProps"
 import FooCta from "../components/FooCta"
 
-import HeroImg from "../images/design1.jpg"
-import ValueImg from "../images/prop-image.jpg"
+export const Images = graphql`
+  query {
+    heroImg: file(relativePath: { eq: "design1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    valueImg: file(relativePath: { eq: "prop-image.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
 
-const WebDesignPage = () => (
+const WebDesignPage = (props) => (
   <Layout>
     <SEO title="Web Design Services" />
 
@@ -19,7 +35,7 @@ const WebDesignPage = () => (
       title={[<span key="[keyhack123webdesign]">Web Design</span>, " & Development Experts"]}
       text="A fully customized solution backed by design and functionality that fits your needs."
       linktext="Get in touch"
-      image={HeroImg}
+      image={props.data.heroImg.childImageSharp.fluid}
     />
     <Intro
       subtitle="With over 12 years experience."
@@ -29,7 +45,7 @@ const WebDesignPage = () => (
       linkText="What our clients say"
     />
     <ValueProps
-      image={ValueImg}
+      image={props.data.valueImg.childImageSharp.fluid}
       title="Web design that makes the phone ring"
       text="A fully responsive website is recommended by Google. Some of the benefits of a mobile-friendly website include:"
       link="/contact/"

@@ -1,26 +1,30 @@
-/*
- todo: find better styled component per page style solution. see css import below.
- */
-
 import React from "react"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-// components
 import Hero from "../components/Hero"
 import FooCta from "../components/FooCta"
 
-// images
-import HeroImg from "../images/contact1.jpg"
-import "../styles/contact.css" // todo: see above
+export const Images = graphql`
+  query {
+    heroImg: file(relativePath: { eq: "contact1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
 
-const ContactPage = () => (
+const ContactPage = (props) => (
   <Layout>
     <SEO title="Contact Us" />
     <Hero
       title={["How can we help ", <span key="[keyhack123contact]">you</span>, " out?"]}
       text="Our people are smart. Our strategies are sound. You’re in the right place."
-      image={HeroImg}
+      image={props.data.heroImg.childImageSharp.fluid}
     />
     <FooCta>
       <h4>Business or demo inquiries</h4>

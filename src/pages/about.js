@@ -1,5 +1,5 @@
 import React from "react"
-
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -8,10 +8,26 @@ import Intro from "../components/Intro"
 import ValueProps from "../components/ValueProps"
 import FooCta from "../components/FooCta"
 
-import HeroImg from "../images/about1.jpg"
-import ValueImg from "../images/about2.jpg"
+export const Images = graphql`
+  query {
+    heroImg: file(relativePath: { eq: "about1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    valueImg: file(relativePath: { eq: "about2.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
 
-const AboutPage = () => (
+const AboutPage = (props) => (
   <Layout>
     <SEO title="About" />
 
@@ -19,7 +35,7 @@ const AboutPage = () => (
       title={["So here's ", <span key="[keyhack123about]">the scoop</span>, ", the skinny, the rundown..."]}
       text="Manawire is a team of curious people that share a passion for creating digital experiences that create results."
       linktext="Get in touch"
-      image={HeroImg}
+      image={props.data.heroImg.childImageSharp.fluid}
     />
     <Intro
       subtitle="Here when you need us."
@@ -29,7 +45,7 @@ const AboutPage = () => (
       linkText="Request a quote"
     />
     <ValueProps
-      image={ValueImg}
+      image={props.data.valueImg.childImageSharp.fluid}
       title="Thinkers, builders, designers. Making great things happen."
       text="We are a small group of creatives, strategiests, and innovators from the humble city of Clarkston, Michigan."
       link="/web-design/"

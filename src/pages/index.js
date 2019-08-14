@@ -1,5 +1,5 @@
 import React from "react"
-
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -8,17 +8,33 @@ import Intro from "../components/Intro"
 import ValueProps from "../components/ValueProps"
 import Quote from "../components/Quote"
 
-import HeroImg from "../images/manawire-home-hero-web-design-seo.jpg"
-import ValueImg from "../images/prop-image.jpg"
+export const Images = graphql`
+  query {
+    heroImg: file(relativePath: { eq: "manawire-home-hero-web-design-seo.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    valueImg: file(relativePath: { eq: "prop-image.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1024) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
 
-const IndexPage = () => (
+const IndexPage = (props) => (
   <Layout>
     <SEO title="Website Design &amp; Development" />
     <Hero
       title={["We're a results-driven ", <span key="[keyhack123index]">digital marketing</span>, " consulting agency."]}
       text="Not generating enough leads? Having a hard time converting customers on your website? Let’s talk."
       linktext="Get in touch"
-      image={HeroImg}
+      image={props.data.heroImg.childImageSharp.fluid}
     />
     <Intro
       subtitle="Are your competitors always one step ahead?"
@@ -28,7 +44,7 @@ const IndexPage = () => (
       linkText="Meet our team"
     />
     <ValueProps
-      image={ValueImg}
+      image={props.data.valueImg.childImageSharp.fluid}
       title="What we can do for you"
       text="Smart organizations need some smart digital solutions. Check out some of the services we offer, or feel free to contact us directly."
       link="/web-design/"
