@@ -28,7 +28,7 @@ const StyledHeader = styled.header`
   left: 0;
   background: #fff;
   z-index: 997;
-  padding: 30px 0;
+  padding: 28px 0;
 
   @media (max-width: 1000px) {
     position: static;
