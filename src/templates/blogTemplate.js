@@ -10,6 +10,17 @@ const Container = styled.div`
   margin-bottom: -50px;
   position: relative;
   padding: 200px 100px 100px;
+
+  @media (max-width: 1000px) {
+    padding: 50px 30px;
+  }
+
+  h1 + span {
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 50px;
+  }
 `
 
 export default function BlogTemplate({
@@ -22,7 +33,7 @@ export default function BlogTemplate({
       <Container>
         <div className="blog-post">
           <h1>{frontmatter.title}</h1>
-          <h2>{frontmatter.date}</h2>
+          <span>Created on {frontmatter.date}</span>
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}

@@ -8,7 +8,6 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/Hero"
-import HeroImg from "../images/about1.jpg"
 
 const StyledSitemap = styled.div`
   margin: 0 auto;
@@ -22,7 +21,7 @@ const StyledSitemap = styled.div`
 
   @media (max-width: 1000px) {
     grid-template-columns: 1fr;
-    padding: 50px;
+    padding: 0 30px 50px;
   }
 
   ul {
@@ -63,12 +62,10 @@ const Sitemap = () => (
     <SEO title="Sitemap" />
     <Hero
       title="Sitemap"
-      linktext="Get in touch"
-      image={HeroImg}
     />
     <StyledSitemap>
       <div className="pages">
-        <h3>Pages</h3>
+        <h4>Pages</h4>
         <ul>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about/">About</Link></li>
@@ -85,7 +82,7 @@ const Sitemap = () => (
         </ul>
       </div>
       <div className="posts">
-        <h3>Posts</h3>
+        <h4>Posts</h4>
         <ul>
           <li><Link to="/blog/common-local-seo-mistakes/">10 Common Local SEO Mistakes</Link></li>
           <li><Link to="/blog/quick-seo-tips-for-small-businesses/">Quick SEO Tips for Small Businesses</Link></li>
