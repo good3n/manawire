@@ -67,7 +67,7 @@ const Hero = (props) => (
       <p>{props.text}</p>
       {props.linktext && <Link to="/contact/">{props.linktext}</Link>}
     </span>
-    <Img fluid={props.image} />
+    {props.image && <Img fluid={props.image} />}
   </StyledHero>
 )
 
