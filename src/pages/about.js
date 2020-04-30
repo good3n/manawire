@@ -25,14 +25,18 @@ export const Images = graphql`
       }
     }
   }
-`;
+`
 
-const AboutPage = (props) => (
-  <Layout>
+const AboutPage = props => (
+  <>
     <SEO title="About" />
 
     <Hero
-      title={["So here's ", <span key="[keyhack123about]">the scoop</span>, ", the skinny, the rundown..."]}
+      title={[
+        "So here's ",
+        <span key="[keyhack123about]">the scoop</span>,
+        ", the skinny, the rundown...",
+      ]}
       text="Manawire is a team of curious people that share a passion for creating digital experiences that create results."
       linktext="Get in touch"
       image={props.data.heroImg.childImageSharp.fluid}
@@ -61,7 +65,7 @@ const AboutPage = (props) => (
       text="We love talking about online projects and strategies. Seriously, some would call it a problem. Get in touch with us and let’s see how Manawire can be of service to your business."
       link="Get in touch"
     />
-  </Layout>
+  </>
 )
 
 export default AboutPage

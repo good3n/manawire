@@ -58,39 +58,68 @@ const StyledSitemap = styled.div`
 `
 
 const Sitemap = () => (
-  <Layout>
+  <>
     <SEO title="Sitemap" />
-    <Hero
-      title="Sitemap"
-    />
+    <Hero title="Sitemap" />
     <StyledSitemap>
       <div className="pages">
         <h4>Pages</h4>
         <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about/">About</Link></li>
-          <li><Link to="/web-design/">Web Design</Link></li>
-          <li><Link to="/seo/">SEO</Link>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about/">About</Link>
+          </li>
+          <li>
+            <Link to="/web-design/">Web Design</Link>
+          </li>
+          <li>
+            <Link to="/seo/">SEO</Link>
             <ul>
-              <li><Link to="/seo/clarkston-seo-services/">Clarkston SEO Services</Link></li>
+              <li>
+                <Link to="/seo/clarkston-seo-services/">
+                  Clarkston SEO Services
+                </Link>
+              </li>
             </ul>
           </li>
-          <li><Link to="/blog/">Blog</Link></li>
-          <li><Link to="/contact/">Contact</Link></li>
-          <li><Link to="/privacy/">Privacy Policy</Link></li>
-          <li><Link to="/sitemap/">Sitemap (current page)</Link></li>
+          <li>
+            <Link to="/blog/">Blog</Link>
+          </li>
+          <li>
+            <Link to="/contact/">Contact</Link>
+          </li>
+          <li>
+            <Link to="/privacy/">Privacy Policy</Link>
+          </li>
+          <li>
+            <Link to="/sitemap/">Sitemap (current page)</Link>
+          </li>
         </ul>
       </div>
       <div className="posts">
         <h4>Posts</h4>
         <ul>
-          <li><Link to="/blog/common-local-seo-mistakes/">10 Common Local SEO Mistakes</Link></li>
-          <li><Link to="/blog/quick-seo-tips-for-small-businesses/">Quick SEO Tips for Small Businesses</Link></li>
-          <li><Link to="/blog/6-reasons-avoid-diy-website-builders-business/">6 reasons to avoid DIY website builders for business</Link></li>
+          <li>
+            <Link to="/blog/common-local-seo-mistakes/">
+              10 Common Local SEO Mistakes
+            </Link>
+          </li>
+          <li>
+            <Link to="/blog/quick-seo-tips-for-small-businesses/">
+              Quick SEO Tips for Small Businesses
+            </Link>
+          </li>
+          <li>
+            <Link to="/blog/6-reasons-avoid-diy-website-builders-business/">
+              6 reasons to avoid DIY website builders for business
+            </Link>
+          </li>
         </ul>
       </div>
     </StyledSitemap>
-  </Layout>
+  </>
 )
 
 export default Sitemap

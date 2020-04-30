@@ -29,7 +29,7 @@ export default function BlogTemplate({
   const { markdownRemark } = data // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark
   return (
-    <Layout>
+    <>
       <Container>
         <div className="blog-post">
           <h1>{frontmatter.title}</h1>
@@ -40,7 +40,7 @@ export default function BlogTemplate({
           />
         </div>
       </Container>
-    </Layout>
+    </>
   )
 }
 

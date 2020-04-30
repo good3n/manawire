@@ -16,25 +16,35 @@ export const Images = graphql`
       }
     }
   }
-`;
+`
 
-const ContactPage = (props) => (
-  <Layout>
+const ContactPage = props => (
+  <>
     <SEO title="Contact Us" />
     <Hero
-      title={["How can we help ", <span key="[keyhack123contact]">you</span>, " out?"]}
+      title={[
+        "How can we help ",
+        <span key="[keyhack123contact]">you</span>,
+        " out?",
+      ]}
       text="Our people are smart. Our strategies are sound. You’re in the right place."
       image={props.data.heroImg.childImageSharp.fluid}
     />
     <FooCta>
       <h4>Business or demo inquiries</h4>
-      <p style={{ fontWeight: `400`, color: `var(--color-bodytext)` }}>For all business inquiries and demonstration requests, get in touch with our sales department.</p>
+      <p style={{ fontWeight: `400`, color: `var(--color-bodytext)` }}>
+        For all business inquiries and demonstration requests, get in touch with
+        our sales department.
+      </p>
       <a href="mailto:hello@manawire.com">hello@manawire.com</a>
       <h4 style={{ marginTop: `100px` }}>Product support</h4>
-      <p style={{ fontWeight: `400`, color: `var(--color-bodytext)` }}>Please see the "Support" link on your website's admin bar. Otherwise, get in touch with our support team.</p>
+      <p style={{ fontWeight: `400`, color: `var(--color-bodytext)` }}>
+        Please see the "Support" link on your website's admin bar. Otherwise,
+        get in touch with our support team.
+      </p>
       <a href="mailto:support@manawire.com">support@manawire.com</a>
     </FooCta>
-  </Layout>
+  </>
 )
 
 export default ContactPage

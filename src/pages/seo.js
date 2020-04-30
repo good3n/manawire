@@ -25,13 +25,16 @@ export const Images = graphql`
       }
     }
   }
-`;
+`
 
-const SeoPage = (props) => (
-  <Layout>
+const SeoPage = props => (
+  <>
     <SEO title="SEO - Search Engine Optimization" />
     <Hero
-      title={[<span key="[keyhack123seo]">SEO</span>, " services & marketing consulting."]}
+      title={[
+        <span key="[keyhack123seo]">SEO</span>,
+        " services & marketing consulting.",
+      ]}
       text="Is your website not getting the traffic you feel it should? More than likely, it’s due to poor search engine rankings."
       linktext="Get in touch"
       image={props.data.heroImg.childImageSharp.fluid}
@@ -56,7 +59,7 @@ const SeoPage = (props) => (
       <li>Search is still the #1 driver of traffic to websites</li>
     </ValueProps>
     <Quote />
-  </Layout>
+  </>
 )
 
 export default SeoPage

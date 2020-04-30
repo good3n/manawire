@@ -25,20 +25,23 @@ export const Images = graphql`
       }
     }
   }
-`;
+`
 
-const WebDesignPage = (props) => (
-  <Layout>
+const WebDesignPage = props => (
+  <>
     <SEO title="Web Design Services" />
 
     <Hero
-      title={[<span key="[keyhack123webdesign]">Web Design</span>, " & Development Experts"]}
+      title={[
+        <span key="[keyhack123webdesign]">Web Design</span>,
+        " & Development Experts",
+      ]}
       text="A fully customized solution backed by design and functionality that fits your needs."
       linktext="Get in touch"
       image={props.data.heroImg.childImageSharp.fluid}
     />
     <Intro
-      subtitle="With over 12 years experience."
+      subtitle="Over 15 years experience."
       title="Our proven track record and real results speaks for itself."
       textTitle="A unique approach"
       text="Getting a website online is easy. However, succeeding with a website is a different story. Our approach? Complete conversion-based business solutions."
@@ -60,7 +63,7 @@ const WebDesignPage = (props) => (
       text="We love talking about online projects and strategies. Seriously, some would call it a problem. Get in touch with us and let’s see how Manawire can be of service to your business."
       link="Get in touch"
     />
-  </Layout>
+  </>
 )
 
 export default WebDesignPage

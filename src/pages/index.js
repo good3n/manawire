@@ -10,7 +10,9 @@ import Quote from "../components/Quote"
 
 export const Images = graphql`
   query {
-    heroImg: file(relativePath: { eq: "manawire-home-hero-web-design-seo.jpg" }) {
+    heroImg: file(
+      relativePath: { eq: "manawire-home-hero-web-design-seo.jpg" }
+    ) {
       childImageSharp {
         fluid(maxWidth: 1024) {
           ...GatsbyImageSharpFluid
@@ -25,13 +27,17 @@ export const Images = graphql`
       }
     }
   }
-`;
+`
 
-const IndexPage = (props) => (
-  <Layout>
+const IndexPage = props => (
+  <>
     <SEO title="Website Design &amp; Development" />
     <Hero
-      title={["We're a results-driven ", <span key="[keyhack123index]">digital marketing</span>, " consulting agency."]}
+      title={[
+        "We're a results-driven ",
+        <span key="[keyhack123index]">digital marketing</span>,
+        " consulting agency.",
+      ]}
       text="Not generating enough leads? Having a hard time converting customers on your website? Let’s talk."
       linktext="Get in touch"
       image={props.data.heroImg.childImageSharp.fluid}
@@ -56,7 +62,7 @@ const IndexPage = (props) => (
       <li>Generate leads to increase revenue</li>
     </ValueProps>
     <Quote />
-  </Layout>
+  </>
 )
 
 export default IndexPage

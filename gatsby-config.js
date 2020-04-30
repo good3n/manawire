@@ -46,6 +46,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/components/layout`),
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
@@ -74,7 +80,7 @@ module.exports = {
       resolve: `gatsby-plugin-scroll-indicator`,
       options: {
         // Configure color of the scroll indicator
-        color: '#3bae52',
+        color: "#3bae52",
         // Configure paths where the scroll indicator will appear
         // paths: ['/', '/blog/**'],
       },
@@ -111,7 +117,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-facebook-pixel`,
       options: {
-        pixelId: '192058494550985',
+        pixelId: "192058494550985",
       },
     },
   ],

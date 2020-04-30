@@ -33,15 +33,21 @@ const Container = styled.div`
 `
 
 const BlogPage = () => (
-  <Layout>
+  <>
     <SEO title="Blog" />
     <Container>
       <h1>Blog</h1>
-      <Link to="/blog/common-local-seo-mistakes/">10 Common Local SEO Mistakes</Link>
-      <Link to="/blog/quick-seo-tips-for-small-businesses/">Quick SEO Tips for Small Businesses</Link>
-      <Link to="/blog/6-reasons-avoid-diy-website-builders-business/">6 reasons to avoid DIY website builders for business</Link>
+      <Link to="/blog/common-local-seo-mistakes/">
+        10 Common Local SEO Mistakes
+      </Link>
+      <Link to="/blog/quick-seo-tips-for-small-businesses/">
+        Quick SEO Tips for Small Businesses
+      </Link>
+      <Link to="/blog/6-reasons-avoid-diy-website-builders-business/">
+        6 reasons to avoid DIY website builders for business
+      </Link>
     </Container>
-  </Layout>
+  </>
 )
 
 export default BlogPage
