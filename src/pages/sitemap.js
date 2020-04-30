@@ -1,11 +1,6 @@
-/*
- todo: use graphql to dynamically populate this sitemap
- */
-
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/Hero"
 
