@@ -9,7 +9,9 @@ const StyledHero = styled.div`
   grid-gap: 100px;
   align-items: center;
   padding-top: 100px;
-  
+  max-width: 1600px;
+  margin: 0 auto;
+
   @media (max-width: 1100px) {
     grid-gap: 50px;
   }
@@ -60,7 +62,7 @@ const StyledHero = styled.div`
   }
 `
 
-const Hero = (props) => (
+const Hero = props => (
   <StyledHero>
     <span>
       <h1>{props.title}</h1>

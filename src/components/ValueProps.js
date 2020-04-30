@@ -4,10 +4,12 @@ import Img from "gatsby-image"
 import BorderLink from "../components/styled/BorderLink"
 
 const StyledValueProps = styled.div`
-  display:grid;
+  display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 80px;
   padding-left: 80px;
+  max-width: 1600px;
+  margin: 0 auto;
 
   @media (max-width: 1000px) {
     grid-template-columns: 1fr;
@@ -62,16 +64,16 @@ const StyledValueProps = styled.div`
   }
 `
 
-const ValueProps = (props) => (
+const ValueProps = props => (
   <StyledValueProps>
     {props.image && <Img fluid={props.image} />}
     <div className="value-props">
       <h2>{props.title}</h2>
       <p>{props.text}</p>
-      <ul>
-        {props.children}
-      </ul>
-      {props.linktext && <BorderLink to={props.link}>{props.linktext}</BorderLink>}
+      <ul>{props.children}</ul>
+      {props.linktext && (
+        <BorderLink to={props.link}>{props.linktext}</BorderLink>
+      )}
     </div>
   </StyledValueProps>
 )
