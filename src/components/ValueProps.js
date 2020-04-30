@@ -7,8 +7,7 @@ const StyledValueProps = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 80px;
-  padding-left: 80px;
-  max-width: 1600px;
+  max-width: 1350px;
   margin: 0 auto;
 
   @media (max-width: 1000px) {

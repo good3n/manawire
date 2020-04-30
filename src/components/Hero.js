@@ -9,7 +9,7 @@ const StyledHero = styled.div`
   grid-gap: 100px;
   align-items: center;
   padding-top: 100px;
-  max-width: 1600px;
+  max-width: 1350px;
   margin: 0 auto;
 
   @media (max-width: 1100px) {
@@ -23,7 +23,7 @@ const StyledHero = styled.div`
   }
 
   > span {
-    padding: 150px 0 150px 80px;
+    padding: 150px 0 150px 0;
     position: relative;
     z-index: 1;
 
