@@ -1,9 +1,6 @@
-import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
-import Img from "gatsby-image"
 
-const StyledHero = styled.div`
+export const StyledHero = styled.div`
   display: grid;
   grid-template-columns: 1fr 50%;
   grid-gap: 100px;
@@ -23,9 +20,13 @@ const StyledHero = styled.div`
   }
 
   > span {
-    padding: 150px 0 150px 0;
+    padding: 150px 0 150px 50px;
     position: relative;
     z-index: 1;
+
+    @media (max-width: 1400px) {
+      padding: 150px 50px;
+    }
 
     @media (max-width: 1000px) {
       padding: 70px 10px;
@@ -61,16 +62,3 @@ const StyledHero = styled.div`
     display: inline-block;
   }
 `
-
-const Hero = props => (
-  <StyledHero>
-    <span>
-      <h1>{props.title}</h1>
-      <p>{props.text}</p>
-      {props.linktext && <Link to="/contact/">{props.linktext}</Link>}
-    </span>
-    {props.image && <Img fluid={props.image} />}
-  </StyledHero>
-)
-
-export default Hero

@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import SEO from "../components/seo"
-import Hero from "../components/Hero"
+import { Hero } from "../components/Hero"
 
 const StyledSitemap = styled.div`
   margin: 0 auto;

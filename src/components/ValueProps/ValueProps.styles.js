@@ -1,9 +1,6 @@
-import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
-import BorderLink from "../components/styled/BorderLink"
 
-const StyledValueProps = styled.div`
+export const StyledValueProps = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 80px;
@@ -62,19 +59,3 @@ const StyledValueProps = styled.div`
     }
   }
 `
-
-const ValueProps = props => (
-  <StyledValueProps>
-    {props.image && <Img fluid={props.image} />}
-    <div className="value-props">
-      <h2>{props.title}</h2>
-      <p>{props.text}</p>
-      <ul>{props.children}</ul>
-      {props.linktext && (
-        <BorderLink to={props.link}>{props.linktext}</BorderLink>
-      )}
-    </div>
-  </StyledValueProps>
-)
-
-export default ValueProps

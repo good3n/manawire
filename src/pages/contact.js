@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
-import Hero from "../components/Hero"
-import FooCta from "../components/FooCta"
+import { Hero } from "../components/Hero"
+import { FooCta } from "../components/Footer"
 
 export const Images = graphql`
   query {

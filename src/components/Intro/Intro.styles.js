@@ -1,9 +1,6 @@
-import React from "react"
 import styled from "styled-components"
 
-import BorderLink from "../components/styled/BorderLink"
-
-const StyledIntro = styled.div`
+export const StyledIntro = styled.div`
   background: #fff;
   margin: -80px auto 0;
   padding: 100px 50px 130px;
@@ -23,7 +20,6 @@ const StyledIntro = styled.div`
   }
 
   div:first-of-type {
-
     span {
       display: block;
       margin-bottom: 30px;
@@ -45,19 +41,3 @@ const StyledIntro = styled.div`
     }
   }
 `
-
-const Intro = (props) => (
-  <StyledIntro>
-    <div>
-      <span>{props.subtitle}</span>
-      <h2>{props.title}</h2>
-    </div>
-    <div>
-      <span>{props.textTitle}</span>
-      <p>{props.text}</p>
-      <BorderLink to="/about/">{props.linkText}</BorderLink>
-    </div>
-  </StyledIntro>
-)
-
-export default Intro

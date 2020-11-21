@@ -10,6 +10,6 @@ const BorderLink = styled(Link)`
   display: inline-block;
   font-size: 16px;
   margin-top: 30px;
-`;
+`
 
-export default BorderLink;
+export default BorderLink
