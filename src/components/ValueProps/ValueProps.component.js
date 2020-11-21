@@ -3,16 +3,14 @@ import Img from "gatsby-image"
 import BorderLink from "../styled/BorderLink"
 import { StyledValueProps } from "./ValueProps.styles"
 
-const ValueProps = props => (
+const ValueProps = ({ image, title, text, children, linktext, link }) => (
   <StyledValueProps>
-    {props.image && <Img fluid={props.image} />}
+    {image && <Img fluid={image} />}
     <div className="value-props">
-      <h2>{props.title}</h2>
-      <p>{props.text}</p>
-      <ul>{props.children}</ul>
-      {props.linktext && (
-        <BorderLink to={props.link}>{props.linktext}</BorderLink>
-      )}
+      <h2>{title}</h2>
+      <p>{text}</p>
+      <ul>{children}</ul>
+      {linktext && <BorderLink to={link}>{linktext}</BorderLink>}
     </div>
   </StyledValueProps>
 )
