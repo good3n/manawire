@@ -28,7 +28,6 @@ export const Images = graphql`
 const AboutPage = props => (
   <>
     <SEO title="About" />
-
     <Hero
       title={[
         "So here's ",
