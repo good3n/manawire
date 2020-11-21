@@ -65,15 +65,10 @@ module.exports = {
     },
     `gatsby-plugin-styled-components`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          {
-            family: `Nunito Sans`,
-            variants: [`400`, `600`, `700`],
-            subsets: [`latin`],
-          },
-        ],
+        fonts: [`nunito sans\:400,600,700`],
+        display: "swap",
       },
     },
     {
