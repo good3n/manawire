@@ -1,30 +1,6 @@
 import React from "react"
-import styled from "styled-components"
 import BorderLink from "../styled/BorderLink"
-
-const StyledFooCta = styled.div`
-  text-align: center;
-  margin: 0 auto -50px;
-  padding: 80px 100px;
-  max-width: 1100px;
-  background: #fff;
-  position: relative;
-
-  @media (max-width: 1000px) {
-    padding: 70px 50px;
-  }
-
-  svg {
-    width: 40px;
-    fill: var(--color-green);
-  }
-
-  p {
-    margin: 40px 0 30px;
-    font-weight: 800;
-    color: var(--color-headertext);
-  }
-`
+import { StyledFooCta } from "./Footer.styles"
 
 const FooCta = ({ title, text, children, link }) => (
   <StyledFooCta className="foo-cta">
