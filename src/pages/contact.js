@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import { Hero } from "../components/Hero"
 import { FooCta } from "../components/Footer"
+import { ContactForm } from "../components/ContactForm"
 
 export const Images = graphql`
   query {
@@ -27,7 +28,9 @@ const ContactPage = props => (
       ]}
       text="Our people are smart. Our strategies are sound. You’re in the right place."
       image={props.data.heroImg.childImageSharp.fluid}
-    />
+    >
+      <ContactForm />
+    </Hero>
     <FooCta>
       <h4>Business or demo inquiries</h4>
       <p style={{ fontWeight: `400`, color: `var(--color-bodytext)` }}>
