@@ -2,7 +2,12 @@ import React from "react"
 import { Form } from "./ContactForm.styles"
 
 const ContactForm = () => (
-  <Form name="Contact Form" method="POST" data-netlify="true">
+  <Form
+    name="Contact Form"
+    method="POST"
+    data-netlify="true"
+    data-netlify-recaptcha="true"
+  >
     <input type="hidden" name="form-name" value="Contact Form" />
     <div>
       <input type="text" name="name" id="name" placeholder=" " />
