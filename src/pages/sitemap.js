@@ -2,7 +2,18 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import SEO from '../components/seo'
-import { Hero } from '../components/Hero'
+
+const Title = styled.h1`
+  background: var(--color-graybg);
+  margin: 105px auto 0;
+  text-align: center;
+  padding: 50px 80px;
+
+  @media (max-width: 1000px) {
+    margin: 0 auto;
+    padding: 30px;
+  }
+`
 
 const StyledSitemap = styled.div`
   margin: 0 auto;
@@ -55,7 +66,7 @@ const StyledSitemap = styled.div`
 const Sitemap = () => (
   <>
     <SEO title="Sitemap" />
-    <Hero title="Sitemap" />
+    <Title>Sitemap</Title>
     <StyledSitemap>
       <div className="pages">
         <h4>Pages</h4>
