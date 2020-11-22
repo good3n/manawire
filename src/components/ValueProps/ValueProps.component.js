@@ -1,7 +1,8 @@
-import React from "react"
-import Img from "gatsby-image"
-import BorderLink from "../styled/BorderLink"
-import { StyledValueProps } from "./ValueProps.styles"
+import React from 'react'
+import Img from 'gatsby-image'
+import PropTypes from 'prop-types'
+import BorderLink from '../styled/BorderLink'
+import { StyledValueProps } from './ValueProps.styles'
 
 const ValueProps = ({ image, title, text, children, linktext, link }) => (
   <StyledValueProps>
@@ -14,5 +15,23 @@ const ValueProps = ({ image, title, text, children, linktext, link }) => (
     </div>
   </StyledValueProps>
 )
+
+ValueProps.defaultProps = {
+  title: null,
+  text: null,
+  linktext: null,
+  link: null,
+  image: null,
+  children: null,
+}
+
+ValueProps.propTypes = {
+  title: PropTypes.string,
+  text: PropTypes.string,
+  image: PropTypes.string,
+  linktext: PropTypes.string,
+  link: PropTypes.string,
+  children: PropTypes.node,
+}
 
 export default ValueProps

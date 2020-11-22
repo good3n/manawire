@@ -1,6 +1,6 @@
-import React from "react"
-import { graphql } from "gatsby"
-import styled from "styled-components"
+import React from 'react'
+import { graphql } from 'gatsby'
+import styled from 'styled-components'
 
 const Container = styled.div`
   margin: 0 auto;
@@ -35,6 +35,7 @@ export default function BlogTemplate({
           <span>Created on {frontmatter.date}</span>
           <div
             className="blog-post-content"
+            // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </div>

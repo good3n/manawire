@@ -1,11 +1,11 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const StyledQuote = styled.div`
   display: grid;
   grid-template-columns: 1fr 460px;
   grid-template-areas:
-    "one two"
-    "three three";
+    'one two'
+    'three three';
   grid-gap: 80px;
   align-items: center;
   margin: 0 auto -50px;
@@ -17,9 +17,9 @@ export const StyledQuote = styled.div`
   @media (max-width: 1000px) {
     grid-template-columns: 1fr;
     grid-template-areas:
-      "one"
-      "two"
-      "three";
+      'one'
+      'two'
+      'three';
     margin: 0 20px -50px;
     padding: 50px 30px;
   }

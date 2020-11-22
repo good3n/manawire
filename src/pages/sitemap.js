@@ -1,8 +1,8 @@
-import React from "react"
-import { Link } from "gatsby"
-import styled from "styled-components"
-import SEO from "../components/seo"
-import { Hero } from "../components/Hero"
+import React from 'react'
+import { Link } from 'gatsby'
+import styled from 'styled-components'
+import SEO from '../components/seo'
+import { Hero } from '../components/Hero'
 
 const StyledSitemap = styled.div`
   margin: 0 auto;
@@ -32,7 +32,7 @@ const StyledSitemap = styled.div`
     padding-left: 20px;
 
     &::before {
-      content: "";
+      content: '';
       height: 3px;
       width: 10px;
       background: var(--color-green);

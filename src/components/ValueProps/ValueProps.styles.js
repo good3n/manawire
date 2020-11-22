@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const StyledValueProps = styled.div`
   display: grid;
@@ -49,7 +49,7 @@ export const StyledValueProps = styled.div`
     color: var(--color-headertext);
 
     &::before {
-      content: "";
+      content: '';
       height: 3px;
       width: 10px;
       background: var(--color-green);

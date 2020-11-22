@@ -1,0 +1,39 @@
+{
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "prettier",
+    "prettier/react"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "env": {
+    "browser": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020,        // Use the latest ecmaScript standard
+    "sourceType": "module",     // Allows using import/export statements
+    "ecmaFeatures": {
+      "jsx": true               // Enable JSX since we're using React
+    }
+  },
+  "rules": {
+    "react/jsx-sort-props": 1,
+    "react/react-in-jsx-scope": "off", // NextJs specific fix: suppress errors for missing 'import React' in files for Next.js
+    "import/prefer-default-export": 0,
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "jsx-a11y/label-has-associated-control": 0,
+    "jsx-a11y/label-has-for": 0,
+    "prettier/prettier": [
+      "error", {}, {
+        "usePrettierrc": true
+      }
+    ]  // Use our .prettierrc file as source
+  }
+}

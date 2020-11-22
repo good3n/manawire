@@ -1,8 +1,8 @@
 ---
-path: "/blog/common-local-seo-mistakes"
-date: "2017-03-11"
-title: "10 Common Local SEO Mistakes"
-featuredImage: "./images/local-seo.jpg"
+path: '/blog/common-local-seo-mistakes'
+date: '2017-03-11'
+title: '10 Common Local SEO Mistakes'
+featuredImage: './images/local-seo.jpg'
 ---
 
 #### Are you hurting your Google rankings?
@@ -17,9 +17,9 @@ When you start to think about SEO, you begin to consider your website’s rankin
 
 When you search for “dentists near me”, you will see a Google map in the results with Dentists that are around you. You will also see local dental offices displayed under the map, as shown in the image below.
 
-![Dentists Near Me](./images/dentists-clarkston-near-me.png "Dentists Near Me")
+![Dentists Near Me](./images/dentists-clarkston-near-me.png 'Dentists Near Me')
 
-That information is actually being pulled from their [Google My Business](https://www.google.com/business/ "Google My Business") listing.
+That information is actually being pulled from their [Google My Business](https://www.google.com/business/ 'Google My Business') listing.
 
 If your business does not utilize Google My Business, you’re missing out local visibility. Google My Business profiles are free to set up, and can be a great tool in allowing your target audience to find you. Also be sure to verify your business listing which will prevent anyone from being able to claim your listing online in the future.
 
@@ -45,7 +45,7 @@ Which is a great segway into mistake #4…
 
 NAPW (or sometimes just referred to as NAP) stands for Name, Address, Phone Number, and Website.
 
-![Inconsistent NAP](./images/inconsistent-nap.png "Inconsistent NAP")
+![Inconsistent NAP](./images/inconsistent-nap.png 'Inconsistent NAP')
 
 As stated above, it’s very important to have consistent information on your website, as well as your Google My Business profile. In addition to this, Google looks at different directories all over the internet to make sure that your NAP is the same across all of these places. This can be a huge pain in the butt considering how many citations there can be for your business all over the internet.
 
@@ -69,9 +69,9 @@ Thinking about your business from a customer’s point of view can be difficult,
 
 **How do they know that?**
 
-Online reviews. There are many different places where your business can be reviewed. Identifying the big ones and staying on top of them can make a big difference. [Over 88% of people trust online reviews](https://www.brightlocal.com/learn/local-consumer-review-survey-2014/ "Over 88% of people trust online reviews").
+Online reviews. There are many different places where your business can be reviewed. Identifying the big ones and staying on top of them can make a big difference. [Over 88% of people trust online reviews](https://www.brightlocal.com/learn/local-consumer-review-survey-2014/ 'Over 88% of people trust online reviews').
 
-![Clarkston Lawyer](./images/lawyer-clarkston-google.png "Clarkston Lawyer")
+![Clarkston Lawyer](./images/lawyer-clarkston-google.png 'Clarkston Lawyer')
 _Who ya gonna call? (Hint: Not Ghostbusters)_
 
 Online reputation management can be done in different ways. Usually, the best way is to just ask them in person. Next time they are at your place of business, simply let them know that a quick review would mean a lot to you. If done over time, you can create a lot of great reviews which will build trust in your brand.
@@ -94,11 +94,11 @@ Backlinks are one of the biggest factors Google considers when ranking websites.
 
 However, today we’re seeing Google become more picky about the links that are pointing to your website. And rightfully so. You cannot expect Google to count just any website to link to you. If that were the case, we’d go make 100 new websites right now and then let the ranking domination begin!
 
-Not so fast. The backlinks you get need to be from quality relevant websites. Meaning, if I’m a [Therapist in Lake Orion](https://www.bmbmedicine.com/ "Therapist in Lake Orion"), it’s not going to help me to get a link from a Plumber in Florida.
+Not so fast. The backlinks you get need to be from quality relevant websites. Meaning, if I’m a [Therapist in Lake Orion](https://www.bmbmedicine.com/ 'Therapist in Lake Orion'), it’s not going to help me to get a link from a Plumber in Florida.
 
 So how do you get these quality relevant websites to link to you?
 
-Well, creating something of value is really the key. There are a lot of different tactics to get ethical quality links. Consider contacting a professional SEO company [professional SEO company](http://manawire.com/seo/ "professional SEO company") to discuss these strategies.
+Well, creating something of value is really the key. There are a lot of different tactics to get ethical quality links. Consider contacting a professional SEO company [professional SEO company](http://manawire.com/seo/ 'professional SEO company') to discuss these strategies.
 
 ## 9. Not using Social Media
 
@@ -112,7 +112,7 @@ The greatest part about it is, wait for it… it’s free! Well, not the ad camp
 
 The last of our common local SEO mistakes. Would you believe me if I told you that more people are accessing the web from a mobile device as opposed to a desktop computer (or laptop)?
 
-![mobile friendly website design](./images/mobileFriendly.png "mobile friendly website design")
+![mobile friendly website design](./images/mobileFriendly.png 'mobile friendly website design')
 
 Well, it’s true. Mobile usage has taken over, and it’s growing by the day. This is so important, that you are actually penalized by Google for not having a website that adapts to mobile devices.
 
@@ -124,4 +124,4 @@ If you don’t have a mobile-friendly website, it’s time to get one. It’s be
 
 Keep calm, and don’t freak out. Most of these common local SEO mistakes are easily fixed with a little bit of work. But before your attempt to implement fixes to some of these issues, make sure you have a good understanding of what you’re doing, why you’re doing it, and how you’re going to do it.
 
-Even professional SEO’s can’t generate results overnight. SEO is an ongoing process and can take a lot of work. If you’re serious about ranking or just want to clean up some of the problems you’re having with your website, then contact a [local SEO professional](http://manawire.com/seo/clarkston-seo-services/ "local SEO professional"). Get your website professionally audited, with a roadmap of what, why, and how to make changes to improve your local SEO.
+Even professional SEO’s can’t generate results overnight. SEO is an ongoing process and can take a lot of work. If you’re serious about ranking or just want to clean up some of the problems you’re having with your website, then contact a [local SEO professional](http://manawire.com/seo/clarkston-seo-services/ 'local SEO professional'). Get your website professionally audited, with a roadmap of what, why, and how to make changes to improve your local SEO.

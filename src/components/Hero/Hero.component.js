@@ -1,7 +1,8 @@
-import React from "react"
-import { Link } from "gatsby"
-import Img from "gatsby-image"
-import { StyledHero } from "./Hero.styles"
+import React from 'react'
+import { Link } from 'gatsby'
+import PropTypes from 'prop-types'
+import Img from 'gatsby-image'
+import { StyledHero } from './Hero.styles'
 
 const Hero = ({ title, text, linktext, image, children }) => (
   <StyledHero>
@@ -14,5 +15,21 @@ const Hero = ({ title, text, linktext, image, children }) => (
     {image && <Img fluid={image} />}
   </StyledHero>
 )
+
+Hero.defaultProps = {
+  title: null,
+  text: null,
+  linktext: null,
+  image: null,
+  children: null,
+}
+
+Hero.propTypes = {
+  title: PropTypes.string,
+  text: PropTypes.string,
+  image: PropTypes.string,
+  linktext: PropTypes.string,
+  children: PropTypes.node,
+}
 
 export default Hero

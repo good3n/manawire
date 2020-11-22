@@ -1,1 +1,1 @@
-export { default as ContactForm } from "./ContactForm.component"
+export { default as ContactForm } from './ContactForm.component'

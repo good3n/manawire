@@ -1,10 +1,10 @@
-import React from "react"
-import { graphql } from "gatsby"
-import SEO from "../components/seo"
-import { Hero } from "../components/Hero"
-import { Intro } from "../components/Intro"
-import { ValueProps } from "../components/ValueProps"
-import { Quote } from "../components/Quote"
+import React from 'react'
+import { graphql } from 'gatsby'
+import SEO from '../components/seo'
+import { Hero } from '../components/Hero'
+import { Intro } from '../components/Intro'
+import { ValueProps } from '../components/ValueProps'
+import { Quote } from '../components/Quote'
 
 export const Images = graphql`
   query {
@@ -31,7 +31,7 @@ const SeoPage = props => (
     <Hero
       title={[
         <span key="[keyhack123seo]">SEO</span>,
-        " services & marketing consulting.",
+        ' services & marketing consulting.',
       ]}
       text="Is your website not getting the traffic you feel it should? More than likely, it’s due to poor search engine rankings."
       linktext="Get in touch"

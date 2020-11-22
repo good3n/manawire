@@ -1,1 +1,1 @@
-export { default as ValueProps } from "./ValueProps.component"
+export { default as ValueProps } from './ValueProps.component'

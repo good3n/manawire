@@ -3,14 +3,14 @@
  todo: add alt text to images
  */
 
-import React from "react"
-import { graphql } from "gatsby"
-import styled from "styled-components"
-import SEO from "../../components/seo"
-import { Hero } from "../../components/Hero"
-import { Intro } from "../../components/Intro"
-import { ValueProps } from "../../components/ValueProps"
-import { Quote } from "../../components/Quote"
+import React from 'react'
+import { graphql } from 'gatsby'
+import styled from 'styled-components'
+import SEO from '../../components/seo'
+import { Hero } from '../../components/Hero'
+import { Intro } from '../../components/Intro'
+import { ValueProps } from '../../components/ValueProps'
+import { Quote } from '../../components/Quote'
 
 export const Images = graphql`
   query {
@@ -56,7 +56,7 @@ const ClarkstonSeoPage = props => (
   <>
     <SEO title="Clarkston SEO Services - Search Engine Optimization" />
     <Hero
-      title={["SEO Company in ", <span>Clarkston, Michigan</span>]}
+      title={['SEO Company in ', <span>Clarkston, Michigan</span>]}
       text="Manawire is the highest rated Clarkston SEO Services company."
       linktext="Get in touch"
       image={props.data.heroImg.childImageSharp.fluid}

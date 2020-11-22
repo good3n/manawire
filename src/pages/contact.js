@@ -1,9 +1,9 @@
-import React from "react"
-import { graphql } from "gatsby"
-import SEO from "../components/seo"
-import { Hero } from "../components/Hero"
-import { FooCta } from "../components/Footer"
-import { ContactForm } from "../components/ContactForm"
+import React from 'react'
+import { graphql } from 'gatsby'
+import SEO from '../components/seo'
+import { Hero } from '../components/Hero'
+import { FooCta } from '../components/Footer'
+import { ContactForm } from '../components/ContactForm'
 
 export const Images = graphql`
   query {
@@ -22,9 +22,9 @@ const ContactPage = props => (
     <SEO title="Contact Us" />
     <Hero
       title={[
-        "How can we help ",
+        'How can we help ',
         <span key="[keyhack123contact]">you</span>,
-        " out?",
+        ' out?',
       ]}
       text="Our people are smart. Our strategies are sound. You’re in the right place."
       image={props.data.heroImg.childImageSharp.fluid}

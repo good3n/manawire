@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const StyledHeader = styled.header`
   position: fixed;
@@ -148,14 +148,14 @@ export const NavToggle = styled.button`
     }
 
     &::before {
-      content: "";
+      content: '';
       display: block;
       top: -10px;
       transition: top 75ms ease 0.12s, opacity 75ms ease;
     }
 
     &::after {
-      content: "";
+      content: '';
       display: block;
       bottom: -10px;
       transition: bottom 75ms ease 0.12s,

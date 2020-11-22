@@ -1,10 +1,10 @@
-import React from "react"
-import { graphql } from "gatsby"
-import SEO from "../components/seo"
-import { Hero } from "../components/Hero"
-import { Intro } from "../components/Intro"
-import { ValueProps } from "../components/ValueProps"
-import { FooCta } from "../components/Footer"
+import React from 'react'
+import { graphql } from 'gatsby'
+import SEO from '../components/seo'
+import { Hero } from '../components/Hero'
+import { Intro } from '../components/Intro'
+import { ValueProps } from '../components/ValueProps'
+import { FooCta } from '../components/Footer'
 
 export const Images = graphql`
   query {
@@ -32,7 +32,7 @@ const WebDesignPage = props => (
     <Hero
       title={[
         <span key="[keyhack123webdesign]">Web Design</span>,
-        " & Development Experts",
+        ' & Development Experts',
       ]}
       text="A fully customized solution backed by design and functionality that fits your needs."
       linktext="Get in touch"

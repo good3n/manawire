@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const Form = styled.form`
   display: grid;
@@ -13,7 +13,7 @@ export const Form = styled.form`
     }
 
     &::after {
-      content: "";
+      content: '';
       height: 0;
       transition: height 0.35s ease;
     }
@@ -35,7 +35,7 @@ export const Form = styled.form`
       }
 
       &::after {
-        content: "";
+        content: '';
         background: var(--color-green);
         height: 4px;
         width: 100%;

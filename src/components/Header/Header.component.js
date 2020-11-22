@@ -1,8 +1,8 @@
-import React from "react"
-import { StaticQuery, Link, graphql } from "gatsby"
-import Img from "gatsby-image"
-import { StyledHeader, GridContainer } from "./Header.styles"
-import MainNav from "./Nav.component"
+import React from 'react'
+import { StaticQuery, Link, graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import { StyledHeader, GridContainer } from './Header.styles'
+import MainNav from './Nav.component'
 
 const Logo = () => (
   <StaticQuery

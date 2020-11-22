@@ -1,10 +1,10 @@
-import React from "react"
-import { graphql } from "gatsby"
-import SEO from "../components/seo"
-import { Hero } from "../components/Hero"
-import { Intro } from "../components/Intro"
-import { ValueProps } from "../components/ValueProps"
-import { Quote } from "../components/Quote"
+import React from 'react'
+import { graphql } from 'gatsby'
+import SEO from '../components/seo'
+import { Hero } from '../components/Hero'
+import { Intro } from '../components/Intro'
+import { ValueProps } from '../components/ValueProps'
+import { Quote } from '../components/Quote'
 
 export const Images = graphql`
   query {
@@ -34,7 +34,7 @@ const IndexPage = props => (
       title={[
         "We're a results-driven ",
         <span key="[keyhack123index]">digital marketing</span>,
-        " consulting agency.",
+        ' consulting agency.',
       ]}
       text="Not generating enough leads? Having a hard time converting customers on your website? Let’s talk."
       linktext="Get in touch"

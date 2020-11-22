@@ -1,10 +1,10 @@
-import React from "react"
-import { graphql } from "gatsby"
-import SEO from "../components/seo"
-import { Hero } from "../components/Hero"
-import { Intro } from "../components/Intro"
-import { ValueProps } from "../components/ValueProps"
-import { FooCta } from "../components/Footer"
+import React from 'react'
+import { graphql } from 'gatsby'
+import SEO from '../components/seo'
+import { Hero } from '../components/Hero'
+import { Intro } from '../components/Intro'
+import { ValueProps } from '../components/ValueProps'
+import { FooCta } from '../components/Footer'
 
 export const Images = graphql`
   query {
@@ -32,7 +32,7 @@ const AboutPage = props => (
       title={[
         "So here's ",
         <span key="[keyhack123about]">the scoop</span>,
-        ", the skinny, the rundown...",
+        ', the skinny, the rundown...',
       ]}
       text="Manawire is a team of curious people that share a passion for creating digital experiences that create results."
       linktext="Get in touch"
