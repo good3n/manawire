@@ -1,5 +1,5 @@
-import React from "react"
-import { Form } from "./ContactForm.styles"
+import React from 'react'
+import { Form } from './ContactForm.styles'
 
 const ContactForm = () => (
   <Form
@@ -11,15 +11,15 @@ const ContactForm = () => (
     <input name="form-name" type="hidden" value="Contact Form" />
     <input name="bot-field" type="hidden" />
     <div>
-      <input id="name" name="name" placeholder=" " type="text" />
+      <input id="name" name="name" placeholder=" " type="text" required />
       <label labelFor="name">Name</label>
     </div>
     <div>
-      <input id="email" name="email" placeholder=" " type="email" />
+      <input id="email" name="email" placeholder=" " type="email" required />
       <label labelFor="email">Email</label>
     </div>
     <div>
-      <textarea id="message" name="message" placeholder=" " />
+      <textarea id="message" name="message" placeholder=" " required />
       <label labelFor="message">Message</label>
     </div>
     <button type="submit">Send</button>
