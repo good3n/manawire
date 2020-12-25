@@ -20,10 +20,18 @@ const MainNav = () => {
         </span>
       </NavToggle>
       <nav id="navigation">
-        <Link to="/about/">About</Link>
-        <Link to="/web-design/">Web Design</Link>
-        <Link to="/seo/">SEO</Link>
-        <Link to="/contact/">Contact</Link>
+        <Link to="/about" onClick={handleToggle}>
+          About
+        </Link>
+        <Link to="/web-design" onClick={handleToggle}>
+          Web Design
+        </Link>
+        <Link to="/seo" onClick={handleToggle}>
+          SEO
+        </Link>
+        <Link to="/contact" onClick={handleToggle}>
+          Contact
+        </Link>
       </nav>
     </NavWrap>
   )
