@@ -4,7 +4,7 @@ import { NavWrap, NavToggle } from './Header.styles'
 
 const MainNav = () => {
   const [isToggled, setIsToggled] = useState(false)
-  const handleToggle = () => setIsToggled(!isToggled)
+  const handleToggle = () => isToggled && setIsToggled(false)
   return (
     <NavWrap className={`${isToggled ? 'active' : ''}`}>
       <NavToggle
@@ -12,7 +12,9 @@ const MainNav = () => {
         aria-label="Menu"
         className={`${isToggled ? 'active' : ''}`}
         id="toggle"
-        onClick={handleToggle}
+        onClick={() => {
+          setIsToggled(!isToggled)
+        }}
         type="button"
       >
         <span className="toggle-box">
