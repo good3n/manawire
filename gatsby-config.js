@@ -94,7 +94,7 @@ module.exports = {
             /* Exact name of the font as defied in @font-face CSS rule */
             name: 'Nunito Sans',
             /* URL to the font CSS file with @font-face definition */
-            file: 'https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400',
+            file: 'https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"',
           },
         ],
       },
