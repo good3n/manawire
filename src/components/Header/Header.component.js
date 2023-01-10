@@ -18,15 +18,32 @@ const Logo = () => {
   return <GatsbyImage image={image} loading="eager" placeholder="tracedSVG" />
 }
 
-const Header = () => (
-  <StyledHeader>
-    <GridContainer>
-      <Link to="/">
-        <Logo alt="Manawire" />
-      </Link>
-      <MainNav />
-    </GridContainer>
-  </StyledHeader>
-)
+const Header = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      logo: file(relativePath: { eq: "manawire-logo.png" }) {
+        childImageSharp {
+          gatsbyImageData(width: 210)
+        }
+      }
+    }
+  `)
+  const image = getImage(data.logo)
+  return (
+    <StyledHeader>
+      <GridContainer>
+        <Link to="/">
+          <GatsbyImage
+            image={image}
+            loading="eager"
+            placeholder="tracedSVG"
+            alt="Manawire"
+          />
+        </Link>
+        <MainNav />
+      </GridContainer>
+    </StyledHeader>
+  )
+}
 
 export default Header
