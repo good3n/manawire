@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -25,10 +26,12 @@ const Container = styled.div`
 const BlogTemplate = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
+  const image = getImage(frontmatter.featuredImage)
 
   return (
     <>
       <Container>
+        <GatsbyImage image={image} alt={frontmatter.title} />
         <div className="blog-post">
           <h1>{frontmatter.title}</h1>
           <span>Created on {frontmatter.date}</span>
@@ -52,6 +55,11 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
+        featuredImage {
+          childImageSharp {
+            gatsbyImageData(width: 1024)
+          }
+        }
       }
     }
   }
