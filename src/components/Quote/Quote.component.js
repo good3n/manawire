@@ -34,7 +34,10 @@ const Quote = () => {
       }
     }
   `)
-  const img1 = getImage(quoteImg)
+  const img1 = getImage(logoBl)
+  const img2 = getImage(logoMt)
+  const img3 = getImage(logoGf)
+  const img4 = getImage(logoPm)
   return (
     <StyledQuote>
       <div className="ql">
@@ -89,10 +92,10 @@ const Quote = () => {
       <div className="q3">
         <p>We&apos;ve worked with companies such as</p>
         <span>
-          {/* <Img alt="Blaze Contracting" fluid={logoBl.childImageSharp.fluid} />
-          <Img alt="PM Technologies" fluid={logoPm.childImageSharp.fluid} />
-          <Img alt="Michigan Tinting" fluid={logoMt.childImageSharp.fluid} />
-          <Img alt="Genesee Forward" fluid={logoGf.childImageSharp.fluid} /> */}
+          <GatsbyImage alt="Blaze Contracting" image={img1} />
+          <GatsbyImage alt="PM Technologies" image={img4} />
+          <GatsbyImage alt="Michigan Tinting" image={img2} />
+          <GatsbyImage alt="Genesee Forward" image={img3} />
         </span>
       </div>
     </StyledQuote>
