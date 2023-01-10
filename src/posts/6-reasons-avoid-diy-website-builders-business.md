@@ -1,15 +1,15 @@
 ---
-path: "/blog/6-reasons-avoid-diy-website-builders-business"
-date: "2017-02-06"
-title: "6 reasons to avoid DIY website builders for business"
-featuredImage: "./images/diy-website-builder.jpg"
+path: '/blog/6-reasons-avoid-diy-website-builders-business'
+date: '2017-02-06'
+title: '6 reasons to avoid DIY website builders for business'
+featuredImage: './images/diy-website-builder.jpg'
 ---
 
 As a business owner, you’ve more than likely put a lot of thought into your website. From how it looks, to what it’s going to say. At some point in your thoughts, you’re going to ask yourself an important question — **_“Where do I start?”_**. Well, we’re here to shed some light on why you might want to avoid DIY website builders for your business.
 
 You may have seen some of the fancy commercials for DIY (Do-It-Yourself) website builders like **Squarespace** and **Wix**. Showcasing how “easy” and “affordable” it is to get your “professional” website up and running. But is it really easy? Are they really affordable… or professional? Let’s make one thing clear right away — you’re not wrong to look into these possible solutions. Why wouldn’t you at least consider something that looks so… simple?
 
-![DIY Website Builders](./images/diy-website-builder.jpg "DIY Website Builders")
+![DIY Website Builders](./images/diy-website-builder.jpg 'DIY Website Builders')
 
 #### 6 reasons why your business should avoid DIY website builders
 
@@ -35,7 +35,7 @@ You should be spending your time doing what you do best. Consider reaching out t
 
 **_“What?!”_**
 
-![DIY Towing](./images/diy-towing.jpg "DIY Towing")
+![DIY Towing](./images/diy-towing.jpg 'DIY Towing')
 
 Yes, you read that right. Squarespace, Weebly, Wix, etc… whatever you create (and pay for) is not yours. This is probably one of the scariest points we will make in this article.
 
@@ -43,7 +43,7 @@ These sites, even though advertised as easy to use, can actually be quite compli
 
 **Don’t take our word for it…**
 
-Check out this interesting information from [Squarespace’s Terms of Service:](https://www.squarespace.com/terms-of-service/ "Squarespace’s Terms of Service")
+Check out this interesting information from [Squarespace’s Terms of Service:](https://www.squarespace.com/terms-of-service/ 'Squarespace’s Terms of Service')
 
 - **They can terminate their agreement with you (and your website) any time they want.**
 - **There is no guarantee that your website will be up and running or that the emails sent from your website will work.**
@@ -66,9 +66,9 @@ First, let’s understand the importance of Google for your business.
 
 It goes without saying that if you can’t be found, then you won’t be noticed. Search engines are changing their algorithms all the time to better deliver what people are searching for. Some practices that used to be good, no longer are. You can even be penalized by using some methods that were once considered standard. By the time these DIY website services make a change, it could already be too late.
 
-In 2015 it was noticed that [Wix websites were dropping from Google’s search results](https://www.seroundtable.com/wix-google-deindex-21034.html "Wix websites drop from Google search"). Eventually, the issue was resolved. But not showing up on Google, even for a short time could have a serious negative impact on your business.
+In 2015 it was noticed that [Wix websites were dropping from Google’s search results](https://www.seroundtable.com/wix-google-deindex-21034.html 'Wix websites drop from Google search'). Eventually, the issue was resolved. But not showing up on Google, even for a short time could have a serious negative impact on your business.
 
-Weebly even still offers a spot to input meta keywords[input meta keywords](https://hc.weebly.com/hc/en-us/articles/205678298-Descriptions-and-Keywords "Wix offers meta keywords input"). Not only does this have [no impact](https://webmasters.googleblog.com/2009/09/google-does-not-use-keywords-meta-tag.html "Meta keywords have no impact") on your website’s ranking, but it actually can show your competition the keyword strategy you’re using to rank!
+Weebly even still offers a spot to input meta keywords[input meta keywords](https://hc.weebly.com/hc/en-us/articles/205678298-Descriptions-and-Keywords 'Wix offers meta keywords input'). Not only does this have [no impact](https://webmasters.googleblog.com/2009/09/google-does-not-use-keywords-meta-tag.html 'Meta keywords have no impact') on your website’s ranking, but it actually can show your competition the keyword strategy you’re using to rank!
 
 Your website needs to be structured in a way that promotes search engine visibility and encourages higher ranking. From titles, descriptions, to headers and content. There is no expert to tell you the manner in which your website should be laid out using these services.
 
@@ -86,7 +86,7 @@ When considering a company for any web server, it’s important to understand th
 
 ## 5.) Templates: A Unique Design — Just like everyone else’s
 
-We all judge books by their covers. It actually can take users [less than half a second](https://research.google.com/pubs/pub38315.html "less than half a second") to form an opinion on your brand. A lot of these companies portray how “unique” you can be, but provide you with templates that all end up sort of blending together.
+We all judge books by their covers. It actually can take users [less than half a second](https://research.google.com/pubs/pub38315.html 'less than half a second') to form an opinion on your brand. A lot of these companies portray how “unique” you can be, but provide you with templates that all end up sort of blending together.
 
 **One of the most important things you can do…**
 
@@ -94,7 +94,7 @@ is showing your potential customers or clients why you’re different than every
 
 ## 6.) Support and Troubleshooting
 
-Would you believe me if I told you that Squarespace, the biggest in their industry, doesn’t even have a support number you can call? Well, believe it. And it gets [worse](https://www.trustpilot.com/review/www.squarespace.com "worse"). Some title examples of the colorful reviews are ["It’s Actually Painful"](https://www.trustpilot.com/reviews/56cf2c6e0000ff00093f450f "It’s Actually Painful"), ["Worst customer service ever"](https://www.trustpilot.com/reviews/546c8a7c0000640002b54b01 "Worst customer service ever"), ["Weebly shut down my website with no warning"](https://www.trustpilot.com/reviews/5872c84c8a10310b701df7fe "Weebly shut down my website with no warning"), and ["NIGHTMARE"](https://www.trustpilot.com/reviews/56e7c36b0000ff000945e311 "NIGHTMARE").
+Would you believe me if I told you that Squarespace, the biggest in their industry, doesn’t even have a support number you can call? Well, believe it. And it gets [worse](https://www.trustpilot.com/review/www.squarespace.com 'worse'). Some title examples of the colorful reviews are ["It’s Actually Painful"](https://www.trustpilot.com/reviews/56cf2c6e0000ff00093f450f 'It’s Actually Painful'), ["Worst customer service ever"](https://www.trustpilot.com/reviews/546c8a7c0000640002b54b01 'Worst customer service ever'), ["Weebly shut down my website with no warning"](https://www.trustpilot.com/reviews/5872c84c8a10310b701df7fe 'Weebly shut down my website with no warning'), and ["NIGHTMARE"](https://www.trustpilot.com/reviews/56e7c36b0000ff000945e311 'NIGHTMARE').
 
 **What’s really troubling…**
 
@@ -107,4 +107,4 @@ At the end of the day, you’re able to make your own decision on what you feel 
 
 **You get what you pay for.**
 
-If you’re serious about growing your business, targeting new customers, and staying competitive, then it’s highly suggested you reach out to a [professional website design company](http://manawire.com/ "Manawire Website Design") that can help you, allowing you to have real control over your online presence.
+If you’re serious about growing your business, targeting new customers, and staying competitive, then it’s highly suggested you reach out to a [professional website design company](http://manawire.com/ 'Manawire Website Design') that can help you, allowing you to have real control over your online presence.

@@ -1,27 +1,23 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import BorderLink from '../styled/BorderLink'
 import { StyledQuote } from './Quote.styles'
 
 const Quote = () => {
-  const { QuoteImg, logoBl, logoMt, logoGf, logoPm } = useStaticQuery(graphql`
+  const { quoteImg, logoBl, logoMt, logoGf, logoPm } = useStaticQuery(graphql`
     fragment quoteFragment on File {
       childImageSharp {
-        fluid(maxWidth: 100) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 100)
       }
     }
     fragment logoFragment on File {
       childImageSharp {
-        fluid(maxWidth: 300) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 300)
       }
     }
     query {
-      QuoteImg: file(relativePath: { eq: "quote-image.png" }) {
+      quoteImg: file(relativePath: { eq: "quote-image.png" }) {
         ...quoteFragment
       }
       logoBl: file(relativePath: { eq: "logo-blaze-contracting.png" }) {
@@ -38,6 +34,7 @@ const Quote = () => {
       }
     }
   `)
+  const img1 = getImage(quoteImg)
   return (
     <StyledQuote>
       <div className="ql">
@@ -52,10 +49,7 @@ const Quote = () => {
       </div>
       <div className="qr">
         <span className="grid">
-          <Img
-            alt="Jacob Pepera Michigan Tinting"
-            fluid={QuoteImg.childImageSharp.fluid}
-          />
+          <GatsbyImage alt="Jacob Pepera Michigan Tinting" image={img1} />
           <span>
             <svg viewBox="0 0 426.67 426.67" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -95,10 +89,10 @@ const Quote = () => {
       <div className="q3">
         <p>We&apos;ve worked with companies such as</p>
         <span>
-          <Img alt="Blaze Contracting" fluid={logoBl.childImageSharp.fluid} />
+          {/* <Img alt="Blaze Contracting" fluid={logoBl.childImageSharp.fluid} />
           <Img alt="PM Technologies" fluid={logoPm.childImageSharp.fluid} />
           <Img alt="Michigan Tinting" fluid={logoMt.childImageSharp.fluid} />
-          <Img alt="Genesee Forward" fluid={logoGf.childImageSharp.fluid} />
+          <Img alt="Genesee Forward" fluid={logoGf.childImageSharp.fluid} /> */}
         </span>
       </div>
     </StyledQuote>

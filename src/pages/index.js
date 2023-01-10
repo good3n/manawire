@@ -12,55 +12,49 @@ export const Images = graphql`
       relativePath: { eq: "manawire-home-hero-web-design-seo.jpg" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 1024) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 1024)
       }
     }
     valueImg: file(relativePath: { eq: "prop-image.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1024) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 1024)
       }
     }
   }
 `
 
-const IndexPage = props => (
-  <>
-    <SEO title="Website Design &amp; Development" />
-    <Hero
-      title={[
-        "We're a results-driven ",
-        <span key="[keyhack123index]">digital marketing</span>,
-        ' consulting agency.',
-      ]}
-      text="Not generating enough leads? Having a hard time converting customers on your website? Let’s talk."
-      linktext="Get in touch"
-      image={props.data.heroImg.childImageSharp.fluid}
-    />
-    <Intro
-      subtitle="Are your competitors always one step ahead?"
-      title="Take control of your website and start leading the way."
-      textTitle="What we do"
-      text="We create simplicity in a complex world by understanding where our clients are and where they want to be. Then, laying out an actionable roadmap to get there."
-      linkText="Meet our team"
-    />
-    <ValueProps
-      image={props.data.valueImg.childImageSharp.fluid}
-      title="What we can do for you"
-      text="Smart organizations need some smart digital solutions. Check out some of the services we offer, or feel free to contact us directly."
-      link="/web-design/"
-      linktext="Our services"
-    >
-      <li>Create custom mobile-friendly websites</li>
-      <li>Increase website traffic</li>
-      <li>Identify conversion funnel issues</li>
-      <li>Generate leads to increase revenue</li>
-    </ValueProps>
-    <Quote />
-  </>
-)
+const IndexPage = ({ data }) => {
+  return (
+    <>
+      <SEO title="Website Design &amp; Development" />
+      <Hero
+        title="We're a results-driven <span>digital marketing</span> consulting agency."
+        text="Not generating enough leads? Having a hard time converting customers on your website? Let’s talk."
+        linkText="Get in touch"
+        image={data.heroImg}
+      />
+      <Intro
+        subtitle="Are your competitors always one step ahead?"
+        title="Take control of your website and start leading the way."
+        textTitle="What we do"
+        text="We create simplicity in a complex world by understanding where our clients are and where they want to be. Then, laying out an actionable roadmap to get there."
+        linkText="Meet our team"
+      />
+      <ValueProps
+        image={data.valueImg}
+        title="What we can do for you"
+        text="Smart organizations need some smart digital solutions. Check out some of the services we offer, or feel free to contact us directly."
+        link="/web-design/"
+        linkText="Our services"
+      >
+        <li>Create custom mobile-friendly websites</li>
+        <li>Increase website traffic</li>
+        <li>Identify conversion funnel issues</li>
+        <li>Generate leads to increase revenue</li>
+      </ValueProps>
+      <Quote />
+    </>
+  )
+}
 
 export default IndexPage

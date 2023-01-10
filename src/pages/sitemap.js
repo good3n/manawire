@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
 import SEO from '../components/seo'
 
@@ -63,7 +63,7 @@ const StyledSitemap = styled.div`
   }
 `
 
-const Sitemap = () => (
+const Sitemap = ({ data }) => (
   <>
     <SEO title="Sitemap" />
     <Title>Sitemap</Title>
@@ -107,21 +107,11 @@ const Sitemap = () => (
       <div className="posts">
         <h4>Posts</h4>
         <ul>
-          <li>
-            <Link to="/blog/common-local-seo-mistakes/">
-              10 Common Local SEO Mistakes
-            </Link>
-          </li>
-          <li>
-            <Link to="/blog/quick-seo-tips-for-small-businesses/">
-              Quick SEO Tips for Small Businesses
-            </Link>
-          </li>
-          <li>
-            <Link to="/blog/6-reasons-avoid-diy-website-builders-business/">
-              6 reasons to avoid DIY website builders for business
-            </Link>
-          </li>
+          {data.allMarkdownRemark.nodes.map((node) => (
+            <li key={node.id}>
+              <Link to={node.frontmatter.path}>{node.frontmatter.title}</Link>
+            </li>
+          ))}
         </ul>
       </div>
     </StyledSitemap>
@@ -129,3 +119,17 @@ const Sitemap = () => (
 )
 
 export default Sitemap
+
+export const query = graphql`
+  query {
+    allMarkdownRemark {
+      nodes {
+        id
+        frontmatter {
+          title
+          path
+        }
+      }
+    }
+  }
+`

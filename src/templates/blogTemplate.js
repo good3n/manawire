@@ -22,11 +22,10 @@ const Container = styled.div`
   }
 `
 
-export default function BlogTemplate({
-  data, // this prop will be injected by the GraphQL query below.
-}) {
-  const { markdownRemark } = data // data.markdownRemark holds our post data
+const BlogTemplate = ({ data }) => {
+  const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
+
   return (
     <>
       <Container>
@@ -35,7 +34,6 @@ export default function BlogTemplate({
           <span>Created on {frontmatter.date}</span>
           <div
             className="blog-post-content"
-            // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </div>
@@ -44,13 +42,15 @@ export default function BlogTemplate({
   )
 }
 
+export default BlogTemplate
+
 export const pageQuery = graphql`
-  query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query ($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      id
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
-        path
         title
       }
     }

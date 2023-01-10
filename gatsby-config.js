@@ -28,7 +28,6 @@ module.exports = {
         path: `${__dirname}/src/posts/images`,
       },
     },
-    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -39,7 +38,7 @@ module.exports = {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
-              maxWidth: 1000,
+              maxWidth: 1024,
             },
           },
         ],
@@ -65,17 +64,46 @@ module.exports = {
     },
     `gatsby-plugin-styled-components`,
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      /* Include plugin */
+      resolve: 'gatsby-omni-font-loader',
+
+      /* Plugin options */
       options: {
-        fonts: [`nunito sans\:400,600,700`],
-        display: "swap",
+        /* Font loading mode */
+        mode: 'async',
+
+        /* Enable font loading listener to handle FOUT */
+        enableListener: true,
+
+        /* Preconnect URL-s. This example is for Google Fonts */
+        preconnect: ['https://fonts.gstatic.com'],
+
+        /* Self-hosted fonts config. Add font files and font CSS files to "static" folder */
+        // custom: [
+        //   {
+        //     /* Exact name of the font as defied in @font-face CSS rule */
+        //     name: ["Font Awesome 5 Brands", "Font Awesome 5 Free"],
+        //     /* Path to the font CSS file inside the "static" folder with @font-face definition */
+        //     file: "/fonts/fontAwesome/css/all.min.css",
+        //   },
+        // ],
+
+        /* Web fonts. File link should point to font CSS file. */
+        web: [
+          {
+            /* Exact name of the font as defied in @font-face CSS rule */
+            name: 'Nunito Sans',
+            /* URL to the font CSS file with @font-face definition */
+            file: 'https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400',
+          },
+        ],
       },
     },
     {
       resolve: `gatsby-plugin-scroll-indicator`,
       options: {
         // Configure color of the scroll indicator
-        color: "#3bae52",
+        color: '#3bae52',
         // Configure paths where the scroll indicator will appear
         // paths: ['/', '/blog/**'],
       },
@@ -109,11 +137,11 @@ module.exports = {
         // cookieDomain: `example.com`,
       },
     },
-    {
-      resolve: `gatsby-plugin-facebook-pixel`,
-      options: {
-        pixelId: "192058494550985",
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-facebook-pixel`,
+    //   options: {
+    //     pixelId: '192058494550985',
+    //   },
+    // },
   ],
 }
