@@ -15,7 +15,7 @@ const Logo = () => {
     }
   `)
   const image = getImage(data.logo)
-  return <GatsbyImage image={image} />
+  return <GatsbyImage image={image} loading="eager" placeholder="tracedSVG" />
 }
 
 const Header = () => (

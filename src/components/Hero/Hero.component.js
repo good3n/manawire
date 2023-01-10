@@ -14,7 +14,7 @@ const Hero = ({ title, text, linkText, image, children }) => {
         {linkText && <Link to="/contact/">{linkText}</Link>}
         {children}
       </span>
-      {image && <GatsbyImage image={img} />}
+      {image && <GatsbyImage image={img} loading="eager" />}
     </StyledHero>
   )
 }
