@@ -34,6 +34,7 @@ const Quote = () => {
       }
     }
   `)
+  const img = getImage(quoteImg)
   const img1 = getImage(logoBl)
   const img2 = getImage(logoMt)
   const img3 = getImage(logoGf)
@@ -52,7 +53,7 @@ const Quote = () => {
       </div>
       <div className="qr">
         <span className="grid">
-          <GatsbyImage alt="Jacob Pepera Michigan Tinting" image={img1} />
+          <GatsbyImage alt="Jacob Pepera Michigan Tinting" image={img} />
           <span>
             <svg viewBox="0 0 426.67 426.67" xmlns="http://www.w3.org/2000/svg">
               <path
