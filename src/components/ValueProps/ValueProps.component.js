@@ -1,19 +1,29 @@
 import React from 'react'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import PropTypes from 'prop-types'
 import BorderLink from '../styled/BorderLink'
 import { StyledValueProps } from './ValueProps.styles'
 
-const ValueProps = ({ image, title, text, children, linktext, link }) => {
-  const img = getImage(image)
+const ValueProps = ({
+  image,
+  title,
+  text,
+  children,
+  linkText,
+  link,
+  listItems,
+}) => {
   return (
     <StyledValueProps>
-      {image && <GatsbyImage image={img} />}
+      {image && image}
       <div className="value-props">
         <h2>{title}</h2>
         <p>{text}</p>
-        <ul>{children}</ul>
-        {linktext && <BorderLink to={link}>{linktext}</BorderLink>}
+        <ul>
+          {listItems.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+        {linkText && <BorderLink to={link}>{linkText}</BorderLink>}
       </div>
     </StyledValueProps>
   )
@@ -31,8 +41,8 @@ ValueProps.defaultProps = {
 ValueProps.propTypes = {
   title: PropTypes.string,
   text: PropTypes.string,
-  image: PropTypes.string,
-  linktext: PropTypes.string,
+  image: PropTypes.object,
+  linkText: PropTypes.string,
   link: PropTypes.string,
   children: PropTypes.node,
 }

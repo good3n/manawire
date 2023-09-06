@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Layout from '../components/layout'
 import SEO from '../components/seo'
 
 const Privacy = styled.div`
@@ -12,7 +13,7 @@ const Privacy = styled.div`
 `
 
 const PrivacyPage = () => (
-  <>
+  <Layout>
     <SEO title="Privacy Policy" />
     <Privacy>
       <h1>Privacy Policy</h1>
@@ -149,7 +150,7 @@ const PrivacyPage = () => (
         .
       </strong>
     </Privacy>
-  </>
+  </Layout>
 )
 
 export default PrivacyPage

@@ -1,4 +1,5 @@
 import React from 'react'
+import Layout from '../components/layout'
 import { Link } from 'gatsby'
 import SEO from '../components/seo'
 import styled from 'styled-components'
@@ -28,7 +29,7 @@ const Container = styled.div`
 `
 
 const BlogPage = () => (
-  <>
+  <Layout>
     <SEO title="Blog" />
     <Container>
       <h1>Blog</h1>
@@ -42,7 +43,7 @@ const BlogPage = () => (
         6 reasons to avoid DIY website builders for business
       </Link>
     </Container>
-  </>
+  </Layout>
 )
 
 export default BlogPage

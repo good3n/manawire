@@ -1,31 +1,12 @@
-/*
- todo: add iframe
- todo: add alt text to images
- */
-
 import React from 'react'
-import { graphql } from 'gatsby'
+import Layout from '../../components/layout'
+import { StaticImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 import SEO from '../../components/seo'
 import { Hero } from '../../components/Hero'
 import { Intro } from '../../components/Intro'
 import { ValueProps } from '../../components/ValueProps'
 import { Quote } from '../../components/Quote'
-
-export const Images = graphql`
-  query {
-    heroImg: file(relativePath: { eq: "union-restaurant-clarkston-mi.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 1024)
-      }
-    }
-    valueImg: file(relativePath: { eq: "depot-park-clarkston-mi.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 1024)
-      }
-    }
-  }
-`
 
 const LocationInfo = styled.div`
   display: grid;
@@ -45,19 +26,19 @@ const LocationInfo = styled.div`
     color: var(--color-headertext);
   }
 `
-// todo: iframe
-// const iframe = '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2999242.558156704!2d-83.355583!3d42.768309!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x249f322b07d58417!2sManawire!5e0!3m2!1sen!2sus!4v1565564796379!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>';
 
-const ClarkstonSeoPage = ({ data }) => {
-  const { heroImg, valueImg } = data
+const ClarkstonSeoPage = () => {
   return (
-    <>
+    <Layout>
       <SEO title="Clarkston SEO Services - Search Engine Optimization" />
       <Hero
         title="SEO Company in <span>Clarkston, Michigan</span>"
         text="Manawire is the highest rated Clarkston SEO Services company."
         linkText="Get in touch"
-        image={heroImg}
+        image={<StaticImage
+          src="../../assets/images/union-restaurant-clarkston-mi.jpg"
+          alt="Clarkston SEO Services The Union Restaurant Clarkston Michigan"
+        />}
       />
       <Intro
         subtitle="SEO in Clarkston &amp; Beyond."
@@ -67,17 +48,23 @@ const ClarkstonSeoPage = ({ data }) => {
         linkText="Request an audit"
       />
       <ValueProps
-        image={valueImg}
+        image={
+          <StaticImage
+            src="../../assets/images/depot-park-clarkston-mi.jpg"
+            alt="Clarkston SEO Services Depot Park Clarkston Michigan"
+          />
+        }
         title="How Your Clarkston SEO Campaign Is Put Together"
         text="Your campaign workflow consists of four stages:"
         link="/contact/"
         linkText="Request an audit"
-      >
-        <li>Keyword research</li>
-        <li>Competitive analysis</li>
-        <li>On-page optimization</li>
-        <li>Off-page optimization</li>
-      </ValueProps>
+        listItems={[
+          'Keyword research',
+          'Competitive analysis',
+          'On-page optimization',
+          'Off-page optimization',
+        ]}
+      />
       <LocationInfo>
         <div>
           <h2>Looking for the best Clarkston SEO Company?</h2>
@@ -161,9 +148,10 @@ const ClarkstonSeoPage = ({ data }) => {
             business would help you.
           </p>
         </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2999242.558156704!2d-83.355583!3d42.768309!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x249f322b07d58417!2sManawire!5e0!3m2!1sen!2sus!4v1565564796379!5m2!1sen!2sus" height="450" frameborder="0" allowfullscreen></iframe>
       </LocationInfo>
       <Quote />
-    </>
+    </Layout>
   )
 }
 

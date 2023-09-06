@@ -1,4 +1,5 @@
 import React from 'react'
+import Layout from '../components/layout'
 import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
 import SEO from '../components/seo'
@@ -64,7 +65,7 @@ const StyledSitemap = styled.div`
 `
 
 const Sitemap = ({ data }) => (
-  <>
+  <Layout>
     <SEO title="Sitemap" />
     <Title>Sitemap</Title>
     <StyledSitemap>
@@ -115,7 +116,7 @@ const Sitemap = ({ data }) => (
         </ul>
       </div>
     </StyledSitemap>
-  </>
+  </Layout>
 )
 
 export default Sitemap

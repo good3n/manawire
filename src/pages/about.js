@@ -1,36 +1,24 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import Layout from '../components/layout'
+import { StaticImage } from 'gatsby-plugin-image'
 import SEO from '../components/seo'
 import { Hero } from '../components/Hero'
 import { Intro } from '../components/Intro'
 import { ValueProps } from '../components/ValueProps'
 import { FooCta } from '../components/Footer'
 
-export const Images = graphql`
-  query {
-    heroImg: file(relativePath: { eq: "about1.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 1024)
-      }
-    }
-    valueImg: file(relativePath: { eq: "about2.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 1024)
-      }
-    }
-  }
-`
-
-const AboutPage = ({ data }) => {
-  const { heroImg, valueImg } = data
+const AboutPage = () => {
   return (
-    <>
+    <Layout>
       <SEO title="About" />
       <Hero
         title="So here's <span>the scoop</span>, the skinny, the rundown..."
         text="Manawire is a team of curious people that share a passion for creating digital experiences that create results."
         linkText="Get in touch"
-        image={heroImg}
+        image={<StaticImage
+          src="../assets/images/about1.jpg"
+          alt="Manawire Web Design SEO"
+        />}
       />
       <Intro
         subtitle="Here when you need us."
@@ -40,23 +28,29 @@ const AboutPage = ({ data }) => {
         linkText="Request a quote"
       />
       <ValueProps
-        image={valueImg}
+        image={
+          <StaticImage
+            src="../assets/images/about2.jpg"
+            alt="Manawire Web Design SEO"
+          />
+        }
         title="Thinkers, builders, designers. Making great things happen."
         text="We are a small group of creatives, strategists, and innovators from the humble city of Clarkston, Michigan."
         link="/web-design/"
         linkText="Our services"
-      >
-        <li>Digital Business Consulting</li>
-        <li>Website Design &amp; Development</li>
-        <li>Lead Generation</li>
-        <li>Marketing &amp; SEO</li>
-      </ValueProps>
+        listItems={[
+          'Digital Business Consulting',
+          'Website Design &amp; Development',
+          'Lead Generation',
+          'Marketing &amp; SEO',
+        ]}
+      />
       <FooCta
         title="Let's work together!"
         text="We love talking about online projects and strategies. Seriously, some would call it a problem. Get in touch with us and let’s see how Manawire can be of service to your business."
         link="Get in touch"
       />
-    </>
+    </Layout>
   )
 }
 

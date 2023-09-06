@@ -1,4 +1,5 @@
 import React from 'react'
+import Layout from '../components/layout'
 import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
@@ -29,7 +30,7 @@ const BlogTemplate = ({ data }) => {
   const image = getImage(frontmatter.featuredImage)
 
   return (
-    <>
+    <Layout>
       <Container>
         <GatsbyImage image={image} alt={frontmatter.title} />
         <div className="blog-post">
@@ -41,7 +42,7 @@ const BlogTemplate = ({ data }) => {
           />
         </div>
       </Container>
-    </>
+    </Layout>
   )
 }
 

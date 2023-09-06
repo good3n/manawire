@@ -4,6 +4,7 @@ export const Form = styled.form`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+  grid-row: span 1 / 2;
 
   div {
     position: relative;

@@ -59,7 +59,7 @@ div {
 
 #gatsby-plugin-scroll-indicator {
   z-index: 1000;
-  top: 101px !important;
+  top: 81px !important;
   height: 4px !important;
 }
 
@@ -75,5 +75,18 @@ div {
 @media (max-width: 1000px) {
   #gatsby-plugin-scroll-indicator {
     top: 0 !important;
+  }
+}
+
+iframe {
+  border: 0;
+  width: 100%;
+  grid-column: span 2;
+}
+
+@media (max-width: 1000px) {
+  iframe {
+    grid-column: span 1;
+    height: 300px !important;
   }
 }

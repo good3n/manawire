@@ -1,31 +1,24 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import Layout from '../components/layout'
+import { StaticImage } from 'gatsby-plugin-image'
 import SEO from '../components/seo'
 import { Hero } from '../components/Hero'
 import { FooCta } from '../components/Footer'
 import { ContactForm } from '../components/ContactForm'
 
-export const Images = graphql`
-  query {
-    heroImg: file(relativePath: { eq: "contact1.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 1024)
-      }
-    }
-  }
-`
-
-const ContactPage = ({ data }) => {
-  const { heroImg } = data
+const ContactPage = () => {
   return (
-    <>
+    <Layout>
       <SEO title="Contact Us" />
       <Hero
         title="How can we help <span>you</span> out?"
-        text="Our people are smart. Our strategies are sound. You’re in the right place."
-        image={heroImg}
+        text="Our people are smart. Our strategies are sound. You're in the right place."
+        form={<ContactForm />}
+        image={<StaticImage
+          src="../assets/images/contact1.jpg"
+          alt="Manawire Web Design SEO"
+        />}
       >
-        <ContactForm />
       </Hero>
       <FooCta>
         <h4>Business or demo inquiries</h4>
@@ -41,7 +34,7 @@ const ContactPage = ({ data }) => {
         </p>
         <a href="mailto:support@manawire.com">support@manawire.com</a>
       </FooCta>
-    </>
+    </Layout>
   )
 }
 

@@ -1,37 +1,26 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import Layout from '../components/layout'
+import { StaticImage } from 'gatsby-plugin-image'
 import SEO from '../components/seo'
 import { Hero } from '../components/Hero'
 import { Intro } from '../components/Intro'
 import { ValueProps } from '../components/ValueProps'
 import { Quote } from '../components/Quote'
 
-export const Images = graphql`
-  query {
-    heroImg: file(
-      relativePath: { eq: "manawire-home-hero-web-design-seo.jpg" }
-    ) {
-      childImageSharp {
-        gatsbyImageData(width: 1024)
-      }
-    }
-    valueImg: file(relativePath: { eq: "prop-image.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 1024)
-      }
-    }
-  }
-`
-
-const IndexPage = ({ data }) => {
+const IndexPage = () => {
   return (
-    <>
+    <Layout>
       <SEO title="Website Design &amp; Development" />
       <Hero
         title="We're a results-driven <span>digital marketing</span> consulting agency."
-        text="Not generating enough leads? Having a hard time converting customers on your website? Let’s talk."
+        text="Not generating enough leads? Having a hard time converting customers on your website? Let's talk."
         linkText="Get in touch"
-        image={data.heroImg}
+        image={
+          <StaticImage
+            src="../assets/images/manawire-home-hero-web-design-seo.jpg"
+            alt="Manawire Web Design SEO"
+          />
+        }
       />
       <Intro
         subtitle="Are your competitors always one step ahead?"
@@ -41,19 +30,25 @@ const IndexPage = ({ data }) => {
         linkText="Meet our team"
       />
       <ValueProps
-        image={data.valueImg}
+        image={
+          <StaticImage
+            src="../assets/images/prop-image.jpg"
+            alt="Manawire Web Design SEO"
+          />
+        }
         title="What we can do for you"
         text="Smart organizations need some smart digital solutions. Check out some of the services we offer, or feel free to contact us directly."
         link="/web-design/"
         linkText="Our services"
-      >
-        <li>Create custom mobile-friendly websites</li>
-        <li>Increase website traffic</li>
-        <li>Identify conversion funnel issues</li>
-        <li>Generate leads to increase revenue</li>
-      </ValueProps>
+        listItems={[
+          'Create custom mobile-friendly websites',
+          'Increase website traffic',
+          'Identify conversion funnel issues',
+          'Generate leads to increase revenue',
+        ]}
+      />
       <Quote />
-    </>
+    </Layout>
   )
 }
 
