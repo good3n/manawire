@@ -6,21 +6,43 @@ import styled from 'styled-components'
 
 const Container = styled.div`
   margin: 0 auto;
-  max-width: 1100px;
+  max-width: 930px;
   background: #fff;
-  margin-bottom: -50px;
+  margin: 0 auto -50px;
   position: relative;
-  padding: 200px 100px 100px;
+  padding: 0 70px 100px;
 
   @media (max-width: 1000px) {
-    padding: 50px 30px;
+    padding: 50px 15px;
+  }
+`
+
+const Meta = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 97px;
+
+  @media (max-width: 1000px) {
+    padding-top: 0;
   }
 
-  h1 + span {
+  h1 {
+    margin-top: 50px;
+  }
+
+  span {
     font-size: 18px;
     font-weight: 600;
-    display: block;
     margin-bottom: 50px;
+    padding-bottom: 10px;
+    display: inline-block;
+    border-bottom: 4px solid var(--color-green);
+    color: var(--color-lightgray);
+
+    @media (max-width: 1000px) {
+      margin-bottom: 0;
+    }
   }
 `
 
@@ -31,11 +53,17 @@ const BlogTemplate = ({ data }) => {
 
   return (
     <Layout>
+      <Meta>
+        <GatsbyImage
+          className="featured-image"
+          image={image}
+          alt={frontmatter.title}
+        />
+        <h1>{frontmatter.title}</h1>
+        <span>Created on {frontmatter.date}</span>
+      </Meta>
       <Container>
-        <GatsbyImage image={image} alt={frontmatter.title} />
         <div className="blog-post">
-          <h1>{frontmatter.title}</h1>
-          <span>Created on {frontmatter.date}</span>
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}
@@ -58,7 +86,7 @@ export const pageQuery = graphql`
         title
         featuredImage {
           childImageSharp {
-            gatsbyImageData(width: 1024)
+            gatsbyImageData(width: 1200, height: 450)
           }
         }
       }
