@@ -15,7 +15,7 @@ You may have seen some of the fancy commercials for DIY (Do-It-Yourself) website
 
 One of the most appealing factors to take into consideration when it comes to DIY website builders is the cost. There are a variety of plans ranging from $0/mo. to $100+/mo. That can look pretty attractive when you’re getting a quote from a professional company for thousands of dollars. The problem is that the urge that you have to save some money now will cost you even more in the long run. The “low” prices that these DIY vendors offer are often very cryptic. They do a good job of telling you what you’re getting, but a very poor job telling you what you’re not.
 
-## 1.) Time consuming
+## 1. Time consuming
 
 Wasn’t one of the points of using a DIY website builder to save time? They are supposed to be easy to use, right?
 
@@ -31,7 +31,7 @@ The website they planned never even happens. I don’t know about you, but those
 
 You should be spending your time doing what you do best. Consider reaching out to a professional website design company.
 
-## 2.) It is not your website
+## 2. It is not your website
 
 **_“What?!”_**
 
@@ -51,7 +51,7 @@ Check out this interesting information from [Squarespace’s Terms of Service:](
 
 In fairness to Squarespace, the other companies in the space have very similar terms. But it doesn’t change the fact that what you’ve built does not belong to you or your business. This reason alone should be grounds to talk to a professional about your business website. In most cases, a professional website design company utilizes popular tools like WordPress. WordPress can be set up almost anywhere. This gives you the freedom of choice without the risk of losing your important information.
 
-## 3.) Not search friendly
+## 3. Not search friendly
 
 A website is much more than a pretty design. While Squarespace and Wix can try to woo you with attractive templates, the foundation of your website needs to be laid in a search-friendly manner.
 
@@ -72,7 +72,7 @@ Weebly even still offers a spot to input meta keywords[input meta keywords](http
 
 Your website needs to be structured in a way that promotes search engine visibility and encourages higher ranking. From titles, descriptions, to headers and content. There is no expert to tell you the manner in which your website should be laid out using these services.
 
-## 4.) Poor performance
+## 4. Poor performance
 
 User experience (UX) is important when it comes to your website. A slow or underperforming website creates a poor and frustrating user experience. This can lead to potential customers or clients leaving your website and ending up on your competitor’s. Google can also track this user experience, seeing visitors leave and punishing your rankings.
 
@@ -84,7 +84,7 @@ That you are thrown onto one of these servers along with hundreds of other accou
 
 When considering a company for any web server, it’s important to understand that your website is more for the visitor than it is for you. Creating poor user experience will only harm your business.
 
-## 5.) Templates: A Unique Design — Just like everyone else’s
+## 5. Templates: A Unique Design — Just like everyone else’s
 
 We all judge books by their covers. It actually can take users [less than half a second](https://research.google.com/pubs/pub38315.html 'less than half a second') to form an opinion on your brand. A lot of these companies portray how “unique” you can be, but provide you with templates that all end up sort of blending together.
 
@@ -92,7 +92,7 @@ We all judge books by their covers. It actually can take users [less than half a
 
 is showing your potential customers or clients why you’re different than everyone else. Every business is different, even in the same industry. It’s important to convey that difference in your branding. When a client reaches out to a professional company and says that they want a website for their business to convey a particular action and be tailored towards a certain audience, they’ll know exactly how to do that. You cannot get this out of templates because they are designed to be easy to use to as broad of an audience as possible.
 
-## 6.) Support and Troubleshooting
+## 6. Support and Troubleshooting
 
 Would you believe me if I told you that Squarespace, the biggest in their industry, doesn’t even have a support number you can call? Well, believe it. And it gets [worse](https://www.trustpilot.com/review/www.squarespace.com 'worse'). Some title examples of the colorful reviews are ["It’s Actually Painful"](https://www.trustpilot.com/reviews/56cf2c6e0000ff00093f450f 'It’s Actually Painful'), ["Worst customer service ever"](https://www.trustpilot.com/reviews/546c8a7c0000640002b54b01 'Worst customer service ever'), ["Weebly shut down my website with no warning"](https://www.trustpilot.com/reviews/5872c84c8a10310b701df7fe 'Weebly shut down my website with no warning'), and ["NIGHTMARE"](https://www.trustpilot.com/reviews/56e7c36b0000ff000945e311 'NIGHTMARE').
 
